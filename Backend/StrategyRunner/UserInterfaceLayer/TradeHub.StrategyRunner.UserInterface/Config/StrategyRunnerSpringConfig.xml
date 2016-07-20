@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <description>
+    Spring Config file for Strategy Runner
+  </description>
+
+  <object id="StrategyRunnerLogger" type="TraceSourceLogger.AsyncClassLogger, TraceSourceLogger" singleton="true">
+    <constructor-arg index="0" value="StrategyRunner"/>
+  </object>
+  
+  <object id="StrategyController"
+          type="TradeHub.StrategyRunner.ApplicationController.Service.StrategyController,TradeHub.StrategyRunner.ApplicationController"
+          singleton="true"/>
+
+  <object id="OptimizationManagerBruteForce"
+          type="TradeHub.StrategyRunner.ApplicationController.Domain.OptimizationManagerBruteForce,TradeHub.StrategyRunner.ApplicationController"
+          singleton="true"/>
+
+  <object id="OptimizationManagerGeneticAlgo"
+          type="TradeHub.StrategyRunner.ApplicationController.Domain.OptimizationManagerGeneticAlgo,TradeHub.StrategyRunner.ApplicationController"
+          singleton="true"/>
+</objects>

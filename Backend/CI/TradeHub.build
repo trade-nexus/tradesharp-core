@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="TradeHub Solution Build" default="TradeHubTestUnitCases" >
+	<target name="build.TradeHub">
+		<exec program="C:\Code Repo\Trade Hub\Installer\TradeHub.Installer.Core\TradeHub-Automated-Installer.bat" />
+	<delete dir="C:/results" />	
+		<exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe">
+			<arg value="C:\Code Repo\Trade Hub\TradeHub.sln" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Configuration=Release" />
+		</exec>
+	</target>
+	<target name="installerBat" depends="build.TradeHub">
+		<exec program="C:\Code Repo\Trade Hub\Installer\TradeHub.Installer.Core\TradeHub-Automated-Installer.bat">
+		</exec>
+	
+	</target>
+	<target name="majorUpgrade" depends="installerBat">
+		<exec program="C:\Code Repo\Trade Hub\IncrementVersion.exe">
+		</exec>
+		
+	</target>
+	<target name="installerBuild" depends="majorUpgrade">
+		<exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe">
+			<arg value="C:\Code Repo\Trade Hub\Installer\TradeHub.Installer.Core\TradeHub.Installer.Core.wixproj" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Configuration=Release" />
+		</exec>
+	</target>
+	
+	<target name="bootstrapperBuild" depends="installerBuild">
+		<exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe">
+			<arg value="C:\Code Repo\Trade Hub\Installer\TradeHub.Installer.LaunchConditions\TradeHub.Installer.LaunchConditions.wixproj" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Configuration=Release" />
+		</exec>
+	</target>
+	<target name="TradeHubTestUnitCases" depends="bootstrapperBuild">
+		
+		<nunit2 haltonfailure="False" failonerror="True">
+			<formatter type="Xml" usefile="true" extension=".xml" outputdir="C:/results" />
+			
+			<test>
+				<assemblies>
+					<includesfile name="UnitTestAssemblies.txt" />
+				</assemblies>
+				<categories>
+					<include name="Unit" />
+				</categories>
+			</test>
+		</nunit2>
+
+	</target>
+	<target name="Documentation" >
+		
+	</target>	
+</project>

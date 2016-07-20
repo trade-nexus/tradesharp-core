@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StrategyMQParameters>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>orderexecution_exchange</Exchange>
+  <AdminMessageQueue>orderexecution_client_admin_queue</AdminMessageQueue>
+  <AdminMessageRoutingKey>orderexecution.client.admin</AdminMessageRoutingKey>
+  
+  <OrderMessageQueue>orderexecution_client_order_queue</OrderMessageQueue>
+  <OrderMessageRoutingKey>orderexecution.client.order</OrderMessageRoutingKey>
+  <ExecutionMessageQueue>orderexecution_client_execution_queue</ExecutionMessageQueue>
+  <ExecutionMessageRoutingKey>orderexecution.client.execution</ExecutionMessageRoutingKey>
+  <RejectionMessageQueue>orderexecution_client_rejection_queue</RejectionMessageQueue>
+  <RejectionMessageRoutingKey>orderexecution.client.rejection</RejectionMessageRoutingKey>
+
+  <LocateMessageQueue>orderexecution_client_locatemessage_queue</LocateMessageQueue>
+  <LocateMessageRoutingKey>orderexecution.locatemessage.order</LocateMessageRoutingKey>
+
+  <InquiryResponseQueue>queue</InquiryResponseQueue>
+  <InquiryResponseRoutingKey>routingkey</InquiryResponseRoutingKey>
+  <HeartbeatResponseQueue>orderexecution_client_heartbeat_queue</HeartbeatResponseQueue>
+  <HeartbeatResponseRoutingKey>orderexecution.client.heartbeat.routingkey</HeartbeatResponseRoutingKey>
+</StrategyMQParameters>

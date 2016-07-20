@@ -1,0 +1,27 @@
+﻿<Window x:Class="TradeHub.DataDownloader.UserInterface.DataModule.View.HistoricBarSettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" Width="290"
+             Height="200"
+            Title="Historic Bars"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Start DateTime:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="20 0 0 0" FontSize="17"/>
+        <xctk:DateTimePicker Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Margin="0 0 10 0" Value="{Binding StartDateTime,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Text="End DateTime:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="20 0 0 0" FontSize="17"/>
+        <xctk:DateTimePicker Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0 0 10 0" Value="{Binding EndDateTime,UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Text="Bar Type:" Grid.Row="2" Grid.Column="0" Margin="20 0 0 0" FontSize="17" VerticalAlignment="Center"/>
+        <ComboBox ItemsSource="{Binding BarTypes,Mode=TwoWay}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="0 0 10 0" SelectedValue="{Binding SelectedBarType}"/>
+        <Button Click="OnSubmit" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Content="Submit" Command="{Binding SubmitHistoricBarRequest}"/>
+    </Grid>
+</Window>

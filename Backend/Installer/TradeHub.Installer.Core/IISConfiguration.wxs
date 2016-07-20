@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Fragment>
+    <DirectoryRef Id="MYWEBWEBSITE">
+      <Component Id="DemoWebsiteAppPool" Guid="" KeyPath="yes">
+        <iis:WebAppPool Id="DemoWebsiteAppPool"
+                        Name="DemoWebsite"
+                        Identity="applicationPoolIdentity"
+                        ManagedPipelineMode="Integrated" 
+                        ManagedRuntimeVersion="v4.0" />
+      </Component>
+
+      <Component Id="InstallWebsite" Guid="" KeyPath="yes">
+         <!--Install to default web site--> 
+        <iis:WebSite Id="DemoWebsiteWebsite" Description='Demo Website' Directory='MYWEBWEBSITE' AutoStart='yes' StartOnInstall='yes'>
+          <iis:WebAddress Id="AllUnassigned" Port="9091" />
+          <iis:WebApplication Id="DemoWebsiteApplication" Name="[DemoWebsiteWebsite][WEBSITE_ID]" WebAppPool="DemoWebsiteAppPool" ></iis:WebApplication>
+        </iis:WebSite>
+
+        <!--<iis:WebDirProperties Id="AnonymousExecuteAndScript"
+                      Read="yes"
+                      Write="no"
+                      Execute="yes"
+                      Script="yes"
+                      AnonymousAccess="yes"
+                      Index="no"
+                      LogVisits="no"/>-->
+      </Component>
+    </DirectoryRef>
+
+    <ComponentGroup Id="DemoWebsiteIssConfiguration">
+      <ComponentRef Id="InstallWebsite" />
+      <ComponentRef Id="DemoWebsiteAppPool" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RabbitMQ>
+  <ConnectionString>localhost</ConnectionString>
+  <Exchange>notificationengine_exchange</Exchange>
+
+  <OrderMessageQueue>notificationengine_order_message_queue</OrderMessageQueue>
+  <OrderMessageRoutingKey>notificationengine.order.message</OrderMessageRoutingKey>
+
+</RabbitMQ>

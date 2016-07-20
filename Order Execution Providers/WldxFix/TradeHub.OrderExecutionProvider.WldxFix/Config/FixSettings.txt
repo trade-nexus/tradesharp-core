@@ -1,0 +1,19 @@
+# default settings for sessions
+[DEFAULT]
+FileStorePath=Fix Logs\store
+FileLogPath=Fix Logs\log
+ConnectionType=initiator
+ReconnectInterval=90
+SenderCompID=141FCS
+DataDictionary=FIX42.xml
+
+# session definition
+[SESSION]
+# inherit FileStorePath, FileLogPath, ConnectionType, ReconnectInterval and SenderCompID from default
+BeginString=FIX.4.2
+TargetCompID=TTHR
+StartTime=00:00:00
+EndTime=23:59:59
+HeartBtInt=60
+SocketConnectPort=9089
+SocketConnectHost=72.5.42.55

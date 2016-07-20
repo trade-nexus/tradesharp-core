@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.PE">
+            <Directory Id="dir8375AEC96E8E7883B33BC60CAA1D136C" Name="Config" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.PE">
+            <Component Id="cmpDD1C166BC5CD243E65E4BE8382567198" Directory="TradeHub.PE" Guid="3207DE02-BE86-4C15-A087-B02E2E8BBA57">
+                <File Id="filEBF1EB16EBAF6E8FAEF1956EF3211811" KeyPath="yes" Source="$(var.PEDir)\Common.Logging.dll" />
+            </Component>
+            <Component Id="cmp5432185E6EBD2AAD6B450106467EF273" Directory="TradeHub.PE" Guid="766E76E1-BF35-4490-994C-75B90D776DAC">
+                <File Id="fil9C6678D24D205D1FABFC3FED89448793" KeyPath="yes" Source="$(var.PEDir)\EasyNetQ.dll" />
+            </Component>
+            <Component Id="cmp8D7C91D7EC79160B4606F260483AAB12" Directory="TradeHub.PE" Guid="230CB0E3-2AC1-47EF-AAA8-AA3E4CD7EA44">
+                <File Id="filF1A3EA9F6027F3CA4B264CCBA3AD224C" KeyPath="yes" Source="$(var.PEDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp465E1E6A7A749D22BC918E2ACA593488" Directory="TradeHub.PE" Guid="09A69538-38DB-458D-AA0A-C3D9764A074B">
+                <File Id="fil0A75ED48B877B105BE4312346A6B8315" KeyPath="yes" Source="$(var.PEDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmp6EAEBAD9A5CBEF866DF0EA33CE811AB5" Directory="TradeHub.PE" Guid="6DCF370D-0A20-4F30-A24C-9C62F79083EB">
+                <File Id="filEE97595A4B1E7F78FA7A6A16357FA9A5" KeyPath="yes" Source="$(var.PEDir)\RabbitMQ.Client.dll" />
+            </Component>
+            <Component Id="cmpCD008C56206775C2B043ABA7190D5C48" Directory="TradeHub.PE" Guid="C8C7DEB1-ACD8-4BEA-97A9-874A345A25C2">
+                <File Id="fil9E5062FDF6EA0A4A1392F010545F9389" KeyPath="yes" Source="$(var.PEDir)\RabbitMQ.Client.xml" />
+            </Component>
+            <Component Id="cmpEEFE8C8C6ADE04EAAAFF59DD56D3862F" Directory="TradeHub.PE" Guid="6F82DC70-05E8-4BAD-A46E-8139E681AA37">
+                <File Id="filDFEEAF8AB29220E1FE7409C2DD951525" KeyPath="yes" Source="$(var.PEDir)\Spring.Aop.dll" />
+            </Component>
+            <Component Id="cmp9C098DF0F12A3FE04A8FA87BD2277B02" Directory="TradeHub.PE" Guid="36003CCA-9B91-4FE4-9554-04435B840D75">
+                <File Id="filD6DBB38A1F5B890CFED91EDBCE2212D4" KeyPath="yes" Source="$(var.PEDir)\Spring.Aop.xml" />
+            </Component>
+            <Component Id="cmp6ED4D535A90151FA3A87EB1BE43258DE" Directory="TradeHub.PE" Guid="29A3D55E-6357-4646-8539-CA9F2BCB0073">
+                <File Id="fil4E7A4A7B8B8FDBBBDBF24298A8B1D66D" KeyPath="yes" Source="$(var.PEDir)\Spring.Core.dll" />
+            </Component>
+            <Component Id="cmp030E8BB3ADE8793185B334C9BECDCC67" Directory="TradeHub.PE" Guid="60F91D8C-F4D1-4B7E-80FC-C6968364E630">
+                <File Id="filF083F8F44F0C3C4003BE20532A902986" KeyPath="yes" Source="$(var.PEDir)\Spring.Core.xml" />
+            </Component>
+            <Component Id="cmp860B8C60BE800950E0899854A3DC8A89" Directory="TradeHub.PE" Guid="04BCD563-060D-4888-BC35-F2E8863D83D1">
+                <File Id="fil1DE34E42C34C534CD19DC6064700CDB5" KeyPath="yes" Source="$(var.PEDir)\Spring.Data.dll" />
+            </Component>
+            <Component Id="cmp0F26414810CA2CF2FEF96AC5EDEF4C54" Directory="TradeHub.PE" Guid="E5BCF43A-02B2-4568-99B7-0761D2C5D528">
+                <File Id="fil8D585E72CD5FD54AF9BFC07F373CCB51" KeyPath="yes" Source="$(var.PEDir)\Spring.Data.xml" />
+            </Component>
+            <Component Id="cmp1F1B2FB3D74FBD03C452447481E79BDC" Directory="TradeHub.PE" Guid="10247F70-6185-4C44-9DB3-2DDB94DF334F">
+                <File Id="fil180E90D682A11473C7DE6C2C4416BF6E" KeyPath="yes" Source="$(var.PEDir)\TraceSourceLogger.dll" />
+            </Component>
+            <Component Id="cmp4486E983315E80A590C76A7AEDED3978" Directory="TradeHub.PE" Guid="738CA4C7-5CA2-45A3-974D-636899440CE6">
+                <File Id="filB5AF6E4F3970B45D634120429AD409B3" KeyPath="yes" Source="$(var.PEDir)\TradeHub.Common.Core.dll" />
+            </Component>
+            <Component Id="cmp30BDA819A7707EEF541A280AE1DFC2D4" Directory="TradeHub.PE" Guid="5C65374B-98C6-4B9D-8C9B-DF3FE7A704B8">
+                <File Id="fil6F82AAD5C58C678B64112BF9AC744691" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.Configuration.dll" />
+            </Component>
+            <Component Id="cmpB9497205D79EBB9BD5FBCCACFFB482CB" Directory="TradeHub.PE" Guid="981EB16D-221E-4A42-A46A-DC8D89C248D8">
+                <File Id="fil39F8517EE14AEE55CFB8E3E606059122" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.Configuration.pdb" />
+            </Component>
+            <Component Id="cmp0AC42C446898D43854A6B52B19CB9040" Directory="TradeHub.PE" Guid="506668F1-9C42-4EE2-8B79-670E5F4F9AFD">
+                <File Id="filCBACAE16FE9C12E5EA202415FFA23FF9" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.dll" />
+            </Component>
+            <Component Id="cmp730E82C8A57AE19F32E5400A7128E265" Directory="TradeHub.PE" Guid="A49295E0-4591-4F30-BD4B-A49F3381B5F2">
+                <File Id="fil25CBD5B7D663EAAB07FFB65741AACD09" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.pdb" />
+            </Component>
+            <Component Id="cmp8FDE7314B54EC83A181E89543DACD576" Directory="TradeHub.PE" Guid="D3B3B986-28CB-4A0E-A8BA-86F3B4DF53BF">
+                <File Id="filCF6D7D25EFF1B449637E892611EE8E8C" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.ProviderGateway.dll" />
+            </Component>
+            <Component Id="cmp205DE77A01134CF07B64B19C429EBAB4" Directory="TradeHub.PE" Guid="23EF3A2D-23DE-4C04-8D3D-002EE92EFF02">
+                <File Id="filCD64BD893C0DE341A1D44B9AAAC0281D" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.ProviderGateway.pdb" />
+            </Component>
+            <Component Id="cmp6D2E17A46F6CD297CD49027FDA4F9DC2" Directory="TradeHub.PE" Guid="DDEE990F-50E2-498A-8F13-00A15569AC6C">
+                <File Id="fil6E5A33A90E589AFBFC5DE3186BE7D837" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.Service.exe" />
+            </Component>
+            <Component Id="cmp8F6381AA63CC6A5C927BF6B0925962A9" Directory="TradeHub.PE" Guid="50005045-C995-4CBB-A0FD-A068D79ECA9A">
+                <File Id="fil6ECB5F33E95A522DE907F696937175C4" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.Service.exe.config" />
+            </Component>
+            <Component Id="cmp53A206D83D1B7DE5CFD6BBE2260246CC" Directory="TradeHub.PE" Guid="16201E16-0E90-4783-AB44-7E2F2D4BB376">
+                <File Id="filD391855A9B8789253F45272349FCEE26" KeyPath="yes" Source="$(var.PEDir)\TradeHub.PositionEngine.Service.pdb" />
+            </Component>
+            <Component Id="cmpB176CC2046D8616FEE9591229F4F05B8" Directory="dir8375AEC96E8E7883B33BC60CAA1D136C" Guid="ADB21CC1-2932-4AA5-B7F1-C690ABFD085B">
+                <File Id="filF222C5E728A4FBEE2417E66A267F2038" KeyPath="yes" Source="$(var.PEDir)\Config\PEMQConfig.xml" />
+            </Component>
+            <Component Id="cmp7BA0C1CC93FC5D062E3B196C1E0D1323" Directory="dir8375AEC96E8E7883B33BC60CAA1D136C" Guid="674F3F24-BC36-4F86-AF87-63102B84DCEC">
+                <File Id="fil1A20BA745C2CE050461EA8A02C3B393B" KeyPath="yes" Source="$(var.PEDir)\Config\PEMQServerConfig.xml" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

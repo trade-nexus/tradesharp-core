@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:nms="http://www.springframework.net/nms">
+
+  <description>
+    Spring Config file for Order Execution Engine Client
+  </description>
+
+  <object id="OEEClientLogger" type="TraceSourceLogger.AsyncClassLogger, TraceSourceLogger" singleton="true">
+    <constructor-arg index="0" value="OEEClient"/>
+  </object>
+
+</objects>

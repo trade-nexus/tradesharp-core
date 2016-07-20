@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LoggerSettings>
+  
+	  <ClassInfo name="IsInfoEnabledClassLevel" serializeAs="String">
+                <value>True</value>
+    </ClassInfo>
+	  <ClassDebug name="IsDebugEnabledClassLevel" serializeAs="String">
+                <value>True</value>
+	  </ClassDebug>
+	
+    <Info name="IsInfoEnabled" serializeAs="String">
+                <value>True</value>
+    </Info>
+    <Debug name="IsDebugEnabled" serializeAs="String">
+                <value>True</value>
+    </Debug>
+
+    <AsyncClassInfo name="InfoLevelforAsyncClassLevel" serializeAs="String">
+                <value>True</value>
+    </AsyncClassInfo>
+	  <AsyncClassDebug name="DebugLevelforAsyncClassLevel" serializeAs="String">
+                <value>True</value>
+	  </AsyncClassDebug>
+
+</LoggerSettings>

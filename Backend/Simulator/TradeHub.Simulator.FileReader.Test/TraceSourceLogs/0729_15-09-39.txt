@@ -1,0 +1,7 @@
+2013-07-29 15:09:39,528  ERROR [TradeHub.SimulatedExchange.FileReader.ReadMarketData] [ReturnExistingFileName] System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Code Repo\Trade Hub\Simulator\TradeHub.Simulator.FileReader.Test\bin\Debug\Blackwood\AAPL\HISTORICBAR'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.InternalGetFileDirectoryNames(String path, String userPathOriginal, String searchPattern, Boolean includeFiles, Boolean includeDirs, SearchOption searchOption, Boolean checkHost)
+   at System.IO.Directory.InternalGetFiles(String path, String searchPattern, SearchOption searchOption)
+   at TradeHub.SimulatedExchange.FileReader.ReadMarketData.ReturnExistingFileName(DateTime startTime, DateTime endTime, String providerName, String symbol) in d:\Code Repo\Trade Hub\Simulator\TradeHub.Simulator.FileReader\ReadMarketData.cs:line 67

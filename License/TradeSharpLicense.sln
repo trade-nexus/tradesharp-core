@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeSharpLicense.Manager", "TradeSharpLicense.Manager\TradeSharpLicense.Manager.csproj", "{15111C82-70CA-475A-B199-06B00D0E0B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeSharpLicense.Console", "TradeSharpLicense.Console\TradeSharpLicense.Console.csproj", "{1FF18CC9-1E5B-4CE2-A958-7416D622036A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15111C82-70CA-475A-B199-06B00D0E0B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15111C82-70CA-475A-B199-06B00D0E0B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15111C82-70CA-475A-B199-06B00D0E0B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15111C82-70CA-475A-B199-06B00D0E0B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF18CC9-1E5B-4CE2-A958-7416D622036A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF18CC9-1E5B-4CE2-A958-7416D622036A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF18CC9-1E5B-4CE2-A958-7416D622036A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF18CC9-1E5B-4CE2-A958-7416D622036A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.OEE">
+            <Directory Id="dir430A2D1C951622869EF9C2EFD0132CA8" Name="Config" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.OEE">
+            <Component Id="cmp44D450297C290AB250924B964E0D81E6" Directory="TradeHub.OEE" Guid="3E0E80BB-4CFD-4D06-A809-FCE368BE2FBE">
+                <File Id="filAC684A9C2A6BD2DFB006240AAB2F8179" KeyPath="yes" Source="$(var.OEEDir)\Atomic.dll" />
+            </Component>
+            <Component Id="cmp48A84C6CBCB5EFB9E1466737499793E0" Directory="TradeHub.OEE" Guid="1071A8D8-F4E4-446D-B0CD-808B740419AE">
+                <File Id="fil5A84FD5A97E34C35B307ABD29864230B" KeyPath="yes" Source="$(var.OEEDir)\Atomic.xml" />
+            </Component>
+            <Component Id="cmpA6968AAE8145B7A7400413031A045E9F" Directory="TradeHub.OEE" Guid="C7134E7F-98CA-402F-892C-29C38AB9B9F8">
+                <File Id="filD0B867919DF810E91FC0AB328C6F20B7" KeyPath="yes" Source="$(var.OEEDir)\Blackwood.Framework.dll" />
+            </Component>
+            <Component Id="cmp0EB7F75F4C545B21C6558AE661A4F919" Directory="TradeHub.OEE" Guid="C383FEB6-952D-46D5-B7DB-EB8792EFE784">
+                <File Id="filC9A5322E93DDEF411F00691C582E1AC0" KeyPath="yes" Source="$(var.OEEDir)\Blackwood.Framework.xml" />
+            </Component>
+            <Component Id="cmpBF0A10610DBDB3E86C5D9292AA0A84F7" Directory="TradeHub.OEE" Guid="669E637E-BB77-473F-9D88-399CD18EBC91">
+                <File Id="fil9ADEE44CDF73B6F4FA397B24DE69984F" KeyPath="yes" Source="$(var.OEEDir)\CBWMessages.dll" />
+            </Component>
+            <Component Id="cmp64B957986D1FA13F8314B00F6CC866E8" Directory="TradeHub.OEE" Guid="5C8CD6EC-D06A-491F-A3A3-CFB8E7804380">
+                <File Id="filC8C177CE0C76D584BF4A8BDF64D206C8" KeyPath="yes" Source="$(var.OEEDir)\Common.Logging.dll" />
+            </Component>
+            <Component Id="cmp19F949EE348A21FD240765681AF7062B" Directory="TradeHub.OEE" Guid="D68A20CA-1B19-4EB1-A6A4-1A1EA9F492ED">
+                <File Id="filA4E0ADA2B53F3C25172D8E4821C3328E" KeyPath="yes" Source="$(var.OEEDir)\Disruptor.dll" />
+            </Component>
+            <Component Id="cmpB7EF8CFE899B8A23AAC9CB956C8C3419" Directory="TradeHub.OEE" Guid="DCC8C12E-9ADA-4C34-A4A8-7A7024DB95A7">
+                <File Id="filCE8F511AEBC05ACBB6651D0D959714DA" KeyPath="yes" Source="$(var.OEEDir)\Disruptor.xml" />
+            </Component>
+            <Component Id="cmp1220A9E493D47979FEB714C4EFC983EE" Directory="TradeHub.OEE" Guid="F4C6145D-E1B7-4766-931D-E5630CCDD18B">
+                <File Id="fil5A70C874EB25B79699CE1A6BC4A46BDD" KeyPath="yes" Source="$(var.OEEDir)\EasyNetQ.dll" />
+            </Component>
+            <Component Id="cmp145DA9A6D6E88DB707DD28252845514B" Directory="TradeHub.OEE" Guid="4031C8B8-42BF-4BFD-9362-53FA12288974">
+                <File Id="fil8C5A4FA58073FE3A2EB028142B62EECB" KeyPath="yes" Source="$(var.OEEDir)\FIX42.xml" />
+            </Component>
+            <Component Id="cmp8DA0EB6B764DA170175AF38816CB2583" Directory="TradeHub.OEE" Guid="0514053C-7740-40C9-BDE2-59F6AD1BB9E9">
+                <File Id="fil3CC4ED27366C43ECEB2CE664180D30A3" KeyPath="yes" Source="$(var.OEEDir)\FIX44.xml" />
+            </Component>
+            <Component Id="cmpCB3D6D53FEFE1BC6B0BFAF23299F178A" Directory="TradeHub.OEE" Guid="5DD6BA1B-BC9D-4BC1-B0D6-663086B8DB85">
+                <File Id="fil66846133F05A5627D09E0D8AD487A54C" KeyPath="yes" Source="$(var.OEEDir)\InstallUtil.InstallLog" />
+            </Component>
+            <Component Id="cmp6495FE6807BB42AA18C0F4C7ABF0FD5E" Directory="TradeHub.OEE" Guid="88D28125-1312-4332-ADE8-F6E94FE44344">
+                <File Id="fil568490BD3D190920E866575587870384" KeyPath="yes" Source="$(var.OEEDir)\LoggerConfig.xml" />
+            </Component>
+            <Component Id="cmp5958E1020CBDA9B2B02CFAC4220A6CFE" Directory="TradeHub.OEE" Guid="7F6D9518-5497-41B1-8A1B-235ABE6C51CB">
+                <File Id="fil069BAEBD102BB28971D39E57FFC62A22" KeyPath="yes" Source="$(var.OEEDir)\Messages.dll" />
+            </Component>
+            <Component Id="cmp5D5C77250566E8E04B9244619E46BA4D" Directory="TradeHub.OEE" Guid="4B217565-B263-475F-A8E7-34AE34589094">
+                <File Id="fil5657BBADBEA276A4EFF3F5611AE39534" KeyPath="yes" Source="$(var.OEEDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmpB7D57593185F82709D7206C45B6BB2AD" Directory="TradeHub.OEE" Guid="C0ECB391-E4E9-4403-AA87-D01FB6B477D8">
+                <File Id="fil28D45F4C4C610E4EBFDB0BB5F8837902" KeyPath="yes" Source="$(var.OEEDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmp3B37FC3289AB8D9EBBAE4B6F2B12E54D" Directory="TradeHub.OEE" Guid="F2D96CA2-CB56-4643-A56E-0C17CA95AD44">
+                <File Id="fil1788BA25A706E86B24CE8BC0D71715DA" KeyPath="yes" Source="$(var.OEEDir)\QuickFix.dll" />
+            </Component>
+            <Component Id="cmpFC9AEAE068CC28D32209E371D958E918" Directory="TradeHub.OEE" Guid="4A8159BA-DA9A-4773-A608-8B814CA188A2">
+                <File Id="filBCE26A824EA66246FADED024BF030C02" KeyPath="yes" Source="$(var.OEEDir)\RabbitMQ.Client.dll" />
+            </Component>
+            <Component Id="cmp3151EAA960C3D6E4358DE46D4092EFAA" Directory="TradeHub.OEE" Guid="5020E1C1-0085-482E-B46F-ECF29C664065">
+                <File Id="fil41867995FDEEC56DA0B2C185DC9A3AA1" KeyPath="yes" Source="$(var.OEEDir)\RabbitMQ.Client.xml" />
+            </Component>
+            <Component Id="cmpA830E1CCCA05DBC905B05551F008A253" Directory="TradeHub.OEE" Guid="5FFD7FD2-FFF0-44A8-B390-9B89DFD54297">
+                <File Id="fil61D72EB46502DEF321D05ADAFEA0F186" KeyPath="yes" Source="$(var.OEEDir)\Spring.Aop.dll" />
+            </Component>
+            <Component Id="cmp9C0D38D0AFAAD2C2514BBCF0C4D57208" Directory="TradeHub.OEE" Guid="7936D38B-E6D8-429D-ACDE-5652FCFFA3CC">
+                <File Id="fil266657078C8A6B7AB5FBA109CEFB39A2" KeyPath="yes" Source="$(var.OEEDir)\Spring.Aop.xml" />
+            </Component>
+            <Component Id="cmpBACC98CB02F1F0695D4F584F0BEF6545" Directory="TradeHub.OEE" Guid="766918D7-6507-4756-902D-158C8C9C1382">
+                <File Id="fil0FF9D58086FE03E39EC1B184AD11E49C" KeyPath="yes" Source="$(var.OEEDir)\Spring.Core.dll" />
+            </Component>
+            <Component Id="cmp8234950648038A3F2CA33C0C05EA2C15" Directory="TradeHub.OEE" Guid="9347B079-2688-452E-AA72-392FEDC98916">
+                <File Id="filB8A7B8D1EDC40433F556059B9C723E6D" KeyPath="yes" Source="$(var.OEEDir)\Spring.Core.xml" />
+            </Component>
+            <Component Id="cmp76AB9EEB9357839E2E148C33622D2B22" Directory="TradeHub.OEE" Guid="BE40BB3D-FCD2-4843-A81A-FFB821C2FC06">
+                <File Id="filD1492FCBB6BC5BD628DA70BF9B66D61E" KeyPath="yes" Source="$(var.OEEDir)\Spring.Data.dll" />
+            </Component>
+            <Component Id="cmp675615B6B150C6A8FEF76B4AF4706A55" Directory="TradeHub.OEE" Guid="A385EA91-B526-43B3-9A14-EA22182ABCA3">
+                <File Id="filDD9E74E94BA9A9457519EC032F6446B7" KeyPath="yes" Source="$(var.OEEDir)\Spring.Data.xml" />
+            </Component>
+            <Component Id="cmp2572BDCABC887421808AE5FE439BDE79" Directory="TradeHub.OEE" Guid="03DBA302-F7B4-4062-AEA6-524615D57BBC">
+                <File Id="fil4FB2553893726CA10285B2F4CB78FDA4" KeyPath="yes" Source="$(var.OEEDir)\TraceSourceLogger.dll" />
+            </Component>
+            <Component Id="cmp7FC3B178CC34E69CA7F60C1F9214C28C" Directory="TradeHub.OEE" Guid="6C56B3A4-07B3-45D8-AAF9-09F28971D9CF">
+                <File Id="fil1C1A29D2164188CCD5DA9C1F7C293235" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.Common.Core.dll" />
+            </Component>
+            <Component Id="cmpCFEF4B0D50ECB40FA53ED0313F6E69C8" Directory="TradeHub.OEE" Guid="F50547C6-BE1E-448E-B234-7B082D4F2014">
+                <File Id="fil421B1FA5C6855B1C8DB40DAFA12FD859" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Client.dll" />
+            </Component>
+            <Component Id="cmpA2530BE49184D9F372ACAA3395BF1991" Directory="TradeHub.OEE" Guid="379D2853-94BD-48F6-A1E5-4C3A4AA9699E">
+                <File Id="filA92D031DE521A79D1E7A9EAFF8B7B85F" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Client.pdb" />
+            </Component>
+            <Component Id="cmpC8C5E995106E50B76390D0B147E3380F" Directory="TradeHub.OEE" Guid="C165E1E4-043B-4758-A7A4-F64A6F2AD86D">
+                <File Id="fil1F904E3269BBB8EB37272EF33C8A4DD5" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Configuration.dll" />
+            </Component>
+            <Component Id="cmpE5D948DCF191B7389DC19A57FA9DD203" Directory="TradeHub.OEE" Guid="2B783E61-13EC-4E82-9605-C15AD57F5750">
+                <File Id="filC48BD0ED0476062166008B0FBBAA8758" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.OrderExecutionProviderGateway.dll" />
+            </Component>
+            <Component Id="cmp84752DA1FD4562FA1668D0708EA1FD4B" Directory="TradeHub.OEE" Guid="35A2940C-A0DE-40C5-A9D5-35601C827B5D">
+                <File Id="fil9D26564671D49D8957C69D477BE85CF0" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Server.dll" />
+            </Component>
+            <Component Id="cmpA72996D3BFD609C6955E4DC1649AA55D" Directory="TradeHub.OEE" Guid="EDCBE6C1-C760-406C-93ED-47B6877814AE">
+                <File Id="filE16358CE4E2F8E6A302F018C1348B09C" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Server.WindowsService.exe" />
+            </Component>
+            <Component Id="cmpB3069184D8D12AA0833285FCB3604580" Directory="TradeHub.OEE" Guid="EFC18906-1D71-4253-9BB9-350760CE5214">
+                <File Id="fil4F921865DB4A813874C89F28AB698ECE" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Server.WindowsService.exe.config" />
+            </Component>
+            <Component Id="cmp3E64F945DA788089FF5E9260AF4A6323" Directory="TradeHub.OEE" Guid="E16F1D5B-1A79-4A89-AE8A-677E9C6CF8FC">
+                <File Id="fil2F5D7970CE01428D16BF2A7FFF62D28A" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Server.WindowsService.InstallLog" />
+            </Component>
+            <Component Id="cmpD16B3143A2453AA3C4FAD73179D7D837" Directory="TradeHub.OEE" Guid="D4CD1D90-095D-4E37-86C9-B6EEE7E117C5">
+                <File Id="fil6CEEDEF2434CE0DB55E83D06DE31BB2E" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionProvider.Blackwood.dll" />
+            </Component>
+            <Component Id="cmpB06406413ED9D54AFD3E5B0415CFB79D" Directory="TradeHub.OEE" Guid="E23F7713-5806-4B31-A3AE-ED4F81DF1837">
+                <File Id="fil2C57ADCF3489D1AC4AE7169700B6ABE8" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionProvider.Blackwood.pdb" />
+            </Component>
+            <Component Id="cmp63249C4F4AD099A7CB9880452490D55B" Directory="TradeHub.OEE" Guid="EF903A1A-F842-4A8B-BB8A-96ACFBE7227A">
+                <File Id="fil5AF84D6B1AAC83DC1A98788B4B571BA4" KeyPath="yes" Source="$(var.OEEDir)\TradeHub.OrderExecutionProviders.Simulator.dll" />
+            </Component>
+            <Component Id="cmpD9EA749845379BDC56650EAFF4D84D44" Directory="TradeHub.OEE" Guid="F1B39570-7D69-4943-9129-9538529A82E6">
+                <File Id="fil6A7AB8D308BFE1430F9E1AF2486BBE3F" KeyPath="yes" Source="$(var.OEEDir)\TradeSharp.OrderExecutionProvider.Forexware.dll" />
+            </Component>
+            <Component Id="cmp0B2DAEC5545D2CB3A0453A3AAFDBAED0" Directory="TradeHub.OEE" Guid="3E1F9829-59E1-4489-865C-CA94ED31800B">
+                <File Id="filC3739106681B821786AF5855E58C3E13" KeyPath="yes" Source="$(var.OEEDir)\TradeSharp.OrderExecutionProvider.Forexware.pdb" />
+            </Component>
+            <Component Id="cmp5481309E6EAEFD6A2763EF7BB0A99CD9" Directory="TradeHub.OEE" Guid="8E907584-D33A-4E7B-BC0E-30762D76D553">
+                <File Id="fil508870358E04EA797429890EFA612CDD" KeyPath="yes" Source="$(var.OEEDir)\Types.dll" />
+            </Component>
+            <Component Id="cmp45182EE8913E27A916E66B013DC46C47" Directory="TradeHub.OEE" Guid="BFE2B439-D606-4627-9E46-6EE4E6F8F0A1">
+                <File Id="fil760B60BB51CCB3F6723B5F9D2221EC23" KeyPath="yes" Source="$(var.OEEDir)\zlib.net.dll" />
+            </Component>
+            <Component Id="cmpEEA1D5EACA0CA60AB0CCDAFD7C7B0EAA" Directory="TradeHub.OEE" Guid="AC77642C-53C4-4829-B844-4038DDE50E1C">
+                <File Id="filA735B11424C84911ABBA350BCE84F050" KeyPath="yes" Source="$(var.OEEDir)\zlib32.dll" />
+            </Component>
+            <Component Id="cmp3A537CF9801F3452FA48B0307B0DB583" Directory="TradeHub.OEE" Guid="2080A401-EF21-4294-8E23-A6C62471DD4D">
+                <File Id="fil9D6186DCC258AF14A32C9BE26C9B2473" KeyPath="yes" Source="$(var.OEEDir)\zlib64.dll" />
+            </Component>
+            <Component Id="cmpA5387E9CA0A7EAA0BCA39E178179AD4A" Directory="TradeHub.OEE" Guid="D19F6E27-0725-42BA-931A-7D6488AC903D">
+                <File Id="fil94C79A5BB89BE0688BFC133509645F2A" KeyPath="yes" Source="$(var.OEEDir)\zlibnet.dll" />
+            </Component>
+            <Component Id="cmp7392CB995915C50574CE214ABC3702B9" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="9C11FA2F-C72A-4D22-8454-22A82DB587DC">
+                <File Id="fil1DB8167077AA7530CD299C42DCCEF686" KeyPath="yes" Source="$(var.OEEDir)\Config\AvailableOEProviders.xml" />
+            </Component>
+            <Component Id="cmp3F3F63A5C8AD08F93C086A93297355A5" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="A1A5AC92-B109-4141-9F4A-3A5EC68BA4AE">
+                <File Id="fil8E9309255C431C93FEE23BF89038D51B" KeyPath="yes" Source="$(var.OEEDir)\Config\BlackwoodOrderConfigLive.xml" />
+            </Component>
+            <Component Id="cmp728BFE1177B81F79A969343A5B2F3AEA" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="44F55C84-6277-49BC-BF33-0340106C07C0">
+                <File Id="fil753084DF50F0C44967197C08AADA7CBD" KeyPath="yes" Source="$(var.OEEDir)\Config\BlackwoodOrderParams.xml" />
+            </Component>
+            <Component Id="cmpB67CB589E08950EEC305E6564F179743" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="0CAB0854-9945-4AE1-A7DF-7B3D5C47DA62">
+                <File Id="fil7EF6F4E54A6E1FF428313A8C54F4CC4B" KeyPath="yes" Source="$(var.OEEDir)\Config\FixSettings.txt" />
+            </Component>
+            <Component Id="cmpFEEA8A01C71199221B3C4139D5D316F3" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="80018635-47F6-4181-A14C-578E2DBF5381">
+                <File Id="fil12211E6EBF2134F76F80FFF02EDB34F3" KeyPath="yes" Source="$(var.OEEDir)\Config\ForexwareFIXSettings.txt" />
+            </Component>
+            <Component Id="cmp5DC5AB21C56C55540AB531BBB617EB67" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="6B910856-D447-42EB-BD8B-B2339E8E4755">
+                <File Id="filB0C8BDA9F89E44C152850D9927178169" KeyPath="yes" Source="$(var.OEEDir)\Config\ForexwareSpringConfig.xml" />
+            </Component>
+            <Component Id="cmp50840ECADEB19856969875CA4F357FE8" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="E8267518-C281-4B0E-B868-3648ED432309">
+                <File Id="filBEF1024510DA58F7711300B1EEDB9040" KeyPath="yes" Source="$(var.OEEDir)\Config\OEEMQConfig.xml" />
+            </Component>
+            <Component Id="cmpC72377467A6340C393FFFCC8B0634B60" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="E8145535-11A7-4CA6-9680-6754C50219EE">
+                <File Id="filEABCF66D2CD44AF728F424B3A2B15D9A" KeyPath="yes" Source="$(var.OEEDir)\Config\OEEMQServerConfig.xml" />
+            </Component>
+            <Component Id="cmp35F070EBADF0566D9625EEC795370FD7" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="9D27BA65-399E-4ACE-9D23-E01427D12E11">
+                <File Id="fil5ADA6A49867CC3AA1B4B731606772629" KeyPath="yes" Source="$(var.OEEDir)\Config\OrderExecutionEngineConfig.xml" />
+            </Component>
+            <Component Id="cmpDA60F9926E53AD13349655399FBB52E9" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="79728D01-362E-4CAB-ABF2-245518F0B9D4">
+                <File Id="fil74105AD17CD5749A03307DB25E5C66F7" KeyPath="yes" Source="$(var.OEEDir)\Config\OrderExecutionProviderGateway.xml" />
+            </Component>
+            <Component Id="cmp7D9D6EEEBC67C4F4A725F8C78D6ED9C3" Directory="dir430A2D1C951622869EF9C2EFD0132CA8" Guid="F8F101F2-7846-4147-B034-4BAFCFC20B33">
+                <File Id="filFE5C67B47FFAC36D28A74EDC48EFFA8D" KeyPath="yes" Source="$(var.OEEDir)\Config\SimulatorConfig.xml" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="TradeHubTests" default="build">
+<target name="clean">
+<delete dir="C:/Code Repo/BuildArtifacts/results" />
+<delete file="C:/Code Repo/BuildArtifacts/testcase.txt" />
+</target>
+	<target name="build" depends="clean">
+	<property name="nunit.filelist" value="" />
+<foreach item="File" property="testfile" verbose="true">
+  <in>
+    <items basedir=".">
+      <include name="C:\Code Repo\Trade Hub\**\bin\Release\*.Tests.dll" />
+    </items>
+  </in>
+  <do>
+        <echo file="C:/Code Repo/BuildArtifacts/testcase.txt" append="true">${testfile}${environment::newline()}</echo>  
+  </do>
+</foreach>
+<echo message="${nunit.filelist}" />
+		<nunit2 haltonfailure="False" failonerror="True">		 
+			<formatter type="Xml" usefile="true" extension=".xml" outputdir="C:/Code Repo/BuildArtifacts/results" />
+			<test>
+				<assemblies> 
+				<includesfile name="C:/Code Repo/BuildArtifacts/testcase.txt" />
+				</assemblies>
+			<categories>
+               <include name="Unit" />            
+            </categories>
+			</test>
+		</nunit2>
+	</target>
+</project>

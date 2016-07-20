@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E45E344-2938-4369-A51A-A8B70C835779}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeHub.StrategyRunner.ApplicationController</RootNamespace>
+    <AssemblyName>TradeHub.StrategyRunner.ApplicationController</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic, Version=2.2.4.0, Culture=neutral, PublicKeyToken=4336634eeb41b69b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Genetic Extension\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Atomic">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Atomic.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor.Scheduler">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\..\packages\Prism\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\packages\Prism\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Spring.Core.1.3.2\lib\net40\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\OptimizationManagerGeneticAlgo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\OptimizationManagerBruteForce.cs" />
+    <Compile Include="Service\StrategyController.cs" />
+    <Compile Include="Service\StrategyExecutor.cs" />
+    <Compile Include="Service\StrategyExecutorGeneticAlgo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Core\TradeHub.Common.Core.csproj">
+      <Project>{24541682-52D0-4E08-AB4F-047CA76E6E26}</Project>
+      <Name>TradeHub.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.HistoricalDataProvider\TradeHub.Common.HistoricalDataProvider.csproj">
+      <Project>{008346c1-508f-48d1-a8b9-ead722e8cb19}</Project>
+      <Name>TradeHub.Common.HistoricalDataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Persistence\TradeHub.Common.Persistence.csproj">
+      <Project>{38448709-33fe-4d4f-9864-8e2ebe8d952a}</Project>
+      <Name>TradeHub.Common.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Optimization\TradeHub.Optimization.Genetic\TradeHub.Optimization.Genetic.csproj">
+      <Project>{32a612a3-7170-4e65-a1eb-450b1c7641b8}</Project>
+      <Name>TradeHub.Optimization.Genetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.HistoricalData\TradeHub.StrategyEngine.HistoricalData.csproj">
+      <Project>{30DB28B2-BD47-4760-AF22-9F755DEFEC4C}</Project>
+      <Name>TradeHub.StrategyEngine.HistoricalData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.MarketData\TradeHub.StrategyEngine.MarketData.csproj">
+      <Project>{10B68988-4BD1-4528-B9C5-8FD5512C8A3D}</Project>
+      <Name>TradeHub.StrategyEngine.MarketData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.OrderExecution\TradeHub.StrategyEngine.OrderExecution.csproj">
+      <Project>{73FD95B3-1A79-432C-A17B-CAD18056C3F0}</Project>
+      <Name>TradeHub.StrategyEngine.OrderExecution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.TradeHub\TradeHub.StrategyEngine.TradeHub.csproj">
+      <Project>{36BFBDBD-FFF6-47A4-97BE-67E5C736105E}</Project>
+      <Name>TradeHub.StrategyEngine.TradeHub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyRunner.Infrastructure\TradeHub.StrategyRunner.Infrastructure.csproj">
+      <Project>{5B49E891-E946-47B8-B460-063A690A21E2}</Project>
+      <Name>TradeHub.StrategyRunner.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserInterfaceLayer\TradeHub.StrategyRunner.UserInterface.Common\TradeHub.StrategyRunner.UserInterface.Common.csproj">
+      <Project>{F104DFF8-DA3F-4477-BED7-82DD4509DE0B}</Project>
+      <Name>TradeHub.StrategyRunner.UserInterface.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserInterfaceLayer\TradeHub.StrategyRunner.UserInterface.SearchModule\TradeHub.StrategyRunner.UserInterface.SearchModule.csproj">
+      <Project>{20F457CD-0029-4BFE-BF54-CBFD8AA753D1}</Project>
+      <Name>TradeHub.StrategyRunner.UserInterface.SearchModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoggerConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

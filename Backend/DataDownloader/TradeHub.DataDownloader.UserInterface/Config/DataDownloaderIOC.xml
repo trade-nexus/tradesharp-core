@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="CsvWriter" type="TradeHub.DataDownloader.CsvFileWriter.FileWriterCSV,TradeHub.DataDownloader.CsvFileWriter"></object>
+  <object id="BinaryFileWriter" type="TradeHub.DataDownloader.BinaryFileWriter.FileWriterBinany,TradeHub.DataDownloader.BinaryFileWriter"></object>
+  <object id="WriterList" type="System.Collections.Generic.List&lt;TradeHub.DataDownloader.Common.Interfaces.IWriter>">
+    <constructor-arg>
+      <list element-type="TradeHub.DataDownloader.Common.Interfaces.IWriter,TradeHub.DataDownloader.Common">
+        <ref object="CsvWriter"/>
+        <ref object="BinaryFileWriter"/>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="ResponseHandler" type="TradeHub.DataDownloader.ApplicationCenter.MarketDataResponseHandler,TradeHub.DataDownloader.ApplicationCenter" singleton="true">
+    <constructor-arg index="0" ref="WriterList"/>
+  </object>
+
+  <object id="MarketDataEngineClient" type="TradeHub.MarketDataEngine.Client.Service.MarketDataEngineClient,TradeHub.MarketDataEngine.Client" singleton="true">
+    </object>
+
+  <object id="MarketDataService" type="TradeHub.StrategyEngine.MarketData.MarketDataService, TradeHub.StrategyEngine.MarketData" singleton="true">
+    <constructor-arg index="0" ref="MarketDataEngineClient" />
+  </object>
+
+  <object id="HistoricalDataService" type="TradeHub.StrategyEngine.HistoricalData.HistoricalDataService, TradeHub.StrategyEngine.HistoricalData" singleton="true">
+    <constructor-arg index="0" ref="MarketDataEngineClient" />
+  </object>
+
+  <object id="ApplicationControl" type="TradeHub.DataDownloader.ApplicationCenter.ApplicationControl,TradeHub.DataDownloader.ApplicationCenter" singleton="true">
+    <constructor-arg index="0" ref="ResponseHandler"/>
+    <constructor-arg index="1" ref="MarketDataService"/>
+    <constructor-arg index="2" ref="HistoricalDataService"/>
+  </object>
+</objects>

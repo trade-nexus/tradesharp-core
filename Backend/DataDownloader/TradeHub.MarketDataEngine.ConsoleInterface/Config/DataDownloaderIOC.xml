@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="CsvWriter" type="TradeHub.DataDownloader.CsvFileWriter.FileWriterCSV,TradeHub.DataDownloader.CsvFileWriter"></object>
+  <object id="BinaryFileWriter" type="TradeHub.DataDownloader.BinaryFileWriter.FileWriterBinany,TradeHub.DataDownloader.BinaryFileWriter"></object>
+  <object id="WriterList" type="System.Collections.Generic.List&lt;TradeHub.DataDownloader.Common.Interfaces.IWriter>">
+    <constructor-arg>
+      <list element-type="TradeHub.DataDownloader.Common.Interfaces.IWriter,TradeHub.DataDownloader.Common">
+        <ref object="CsvWriter"/>
+        <ref object="BinaryFileWriter"/>
+      </list>
+    </constructor-arg>
+  </object>
+  <object id="ResponseHandler" type="TradeHub.DataDownloader.Application.MarketDataResponseHandler,TradeHub.DataDownloader.Application" singleton="true">
+    <constructor-arg index="0" ref="WriterList"/>
+  </object>
+  <object id="MarketDataEngineClient" type="TradeHub.MarketDataEngine.Client.Service.MarketDataEngineClient,TradeHub.MarketDataEngine.Client" singleton="false">
+    <constructor-arg index="0" value="DataDownloaderApplic"/>
+  </object>
+  <object id="ApplicationControl" type="TradeHub.DataDownloader.Application.ApplicationControl,TradeHub.DataDownloader.Application" singleton="false">
+    <constructor-arg index="0" ref="ResponseHandler"/>
+    <constructor-arg index="1" ref="MarketDataEngineClient"/>
+  </object>
+</objects>

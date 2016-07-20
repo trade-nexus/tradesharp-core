@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <description>
+    The object definition for Forexware market data provider
+  </description>
+
+  <object id="ForexwareOrderExecutionProvider" type="TradeSharp.OrderExecutionProvider.Forexware.Provider.ForexwareOrderExecutionProvider, TradeSharp.OrderExecutionProvider.Forexware">
+  </object>
+
+</objects>

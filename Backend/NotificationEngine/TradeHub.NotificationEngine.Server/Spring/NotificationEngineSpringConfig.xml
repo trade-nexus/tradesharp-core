@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:nms="http://www.springframework.net/nms">
+
+  <description>
+    Spring Config file for Notification Engine Application Controller
+  </description>
+
+  <object id="Communicator" type="TradeHub.NotificationEngine.CommunicationManager.Service.NotificationEngineMqServer, TradeHub.NotificationEngine.CommunicationManager" singleton="true">
+    <constructor-arg index="0" value="NotificationEngineMqConfig.xml"/>
+  </object>
+
+  <object id="NotificationController" type="TradeHub.NotificationEngine.NotificationCenter.Services.NotificationController, TradeHub.NotificationEngine.NotificationCenter" singleton="true">
+  </object>
+
+  <object id="ApplicationController" type="TradeHub.NotificationEngine.Server.Service.ApplicationController, TradeHub.NotificationEngine.Server">
+    <constructor-arg index="0" ref="Communicator"/>
+    <constructor-arg index="1" ref="NotificationController"/>
+  </object>
+
+</objects>

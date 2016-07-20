@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B428A767-E451-42AF-A451-B6F2DF5B3A36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeHub.StrategyEngine.PositionService.Tests</RootNamespace>
+    <AssemblyName>TradeHub.StrategyEngine.PositionService.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Atomic">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Atomic.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor.Scheduler">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\packages\Spring.Aop.1.3.2\lib\net40\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\packages\Spring.Core.1.3.2\lib\net40\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\packages\Spring.Data.1.3.2\lib\net40\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integration\PositionEngineServiceTestCase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Core\TradeHub.Common.Core.csproj">
+      <Project>{24541682-52d0-4e08-ab4f-047ca76e6e26}</Project>
+      <Name>TradeHub.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OrderExecutionEngine\TradeHub.OrderExecutionEngine.Client\TradeHub.OrderExecutionEngine.Client.csproj">
+      <Project>{548683cc-fb53-4611-a65e-afdd5f5ff7dd}</Project>
+      <Name>TradeHub.OrderExecutionEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OrderExecutionEngine\TradeHub.OrderExecutionEngine.Server\TradeHub.OrderExecutionEngine.Server.csproj">
+      <Project>{9ff262a9-e21f-4fcb-984c-4a0efaa24cc1}</Project>
+      <Name>TradeHub.OrderExecutionEngine.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PositionEngine\TradeHub.PositionEngine.Client\TradeHub.PositionEngine.Client.csproj">
+      <Project>{9ee617d4-674b-4d2e-ae1b-9c4864ae9d48}</Project>
+      <Name>TradeHub.PositionEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PositionEngine\TradeHub.PositionEngine.Configuration\TradeHub.PositionEngine.Configuration.csproj">
+      <Project>{B3F19C44-FF8D-473D-8C67-01DBACE89A9A}</Project>
+      <Name>TradeHub.PositionEngine.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PositionEngine\TradeHub.PositionEngine.ProviderGateway\TradeHub.PositionEngine.ProviderGateway.csproj">
+      <Project>{5650E631-0FAA-4D5F-9109-EB99A361C651}</Project>
+      <Name>TradeHub.PositionEngine.ProviderGateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PositionEngine\TradeHub.PositionEngine\TradeHub.PositionEngine.Server.csproj">
+      <Project>{c86753a0-1042-4184-bb70-e095f4089fd1}</Project>
+      <Name>TradeHub.PositionEngine.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.OrderExecution\TradeHub.StrategyEngine.OrderExecution.csproj">
+      <Project>{73fd95b3-1a79-432c-a17b-cad18056c3f0}</Project>
+      <Name>TradeHub.StrategyEngine.OrderExecution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.PositionService\TradeHub.StrategyEngine.PositionService.csproj">
+      <Project>{f32f97ad-8655-4f44-9607-5d0a1e91866d}</Project>
+      <Name>TradeHub.StrategyEngine.PositionService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoggerConfig.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

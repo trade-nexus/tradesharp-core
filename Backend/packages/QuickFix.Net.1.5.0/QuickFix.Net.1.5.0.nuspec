@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>QuickFix.Net</id>
+    <version>1.5.0</version>
+    <title>QuickFIX/n</title>
+    <authors>Quant Edge JSC</authors>
+    <owners>Quant Edge JSC</owners>
+    <licenseUrl>https://github.com/connamara/quickfixn</licenseUrl>
+    <projectUrl>https://github.com/connamara/quickfixn</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>QuickFIX/n is a .NET port of QuickFIX, an open source C++ FIX engine.
+
+We love QuickFIX. We have been contributors nearly since its conception and use it heavily in our products and consulting.
+
+The goal of QuickFIX/n is to create an open source FIX engine that feels native to C#. The (C++) QuickFIX project maintains a C# wrapper which has been used successfully in .NET for many years, but it results in code that is not idiomatic of .NET development. QuickFIX/n attempts to keep the same robustness and conformance of QuickFIX with a similar API while bringing native performance and idiomatic usage to .NET.
+
+For Java development, please visit the excellent QuickFIX/J.
+
+QuickFIX/n uses the QuickFIX name with the full backing and support of QuickFIX and its creator Oren Miller.</description>
+    <summary>QuickFIX/n implements the FIX protocol on .NET.</summary>
+    <releaseNotes>QuickFIX/n 1.5.0</releaseNotes>
+    <copyright>QuickFIX/n is sponsored by Connamara Systems</copyright>
+    <tags>fix, quickfix, .net,</tags>
+  </metadata>
+</package>

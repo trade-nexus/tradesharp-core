@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <description>
+    The object definition for Interactive Brokers market data provider
+  </description>
+
+  <object id="IBClient" type="Krs.Ats.IBNet.IBClient, Krs.Ats.IBNet"/>
+  
+  <object id="IBConnectionParametersLoader" type="TradeHub.MarketDataProvider.InteractiveBrokers.Utility.ConnectionParametersLoader, TradeHub.MarketDataProvider.InteractiveBrokers">
+    <constructor-arg type="string" value="InteractiveBrokersParams.xml"/>
+  </object>
+
+  <object id="IBConnectionParametersLoader.Parameter" type="Spring.Objects.Factory.Config.PropertyRetrievingFactoryObject, Spring.Core">
+    <property name="TargetObject" ref="IBConnectionParametersLoader"/>
+    <property name="TargetProperty" value="Parameters"/>
+  </object>
+
+  <object id="InteractiveBrokersMarketDataProvider" type="TradeHub.MarketDataProvider.InteractiveBrokers.Provider.InteractiveBrokersMarketDataProvider, TradeHub.MarketDataProvider.InteractiveBrokers">
+    <constructor-arg index="0" ref="IBClient"/>
+    <constructor-arg index="1" ref="IBConnectionParametersLoader.Parameter"/>
+  </object>
+
+</objects>

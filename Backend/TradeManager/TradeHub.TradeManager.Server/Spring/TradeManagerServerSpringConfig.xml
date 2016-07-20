@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <description>
+    Spring Config file for Trade Manager Server
+  </description>
+
+  <object id="TradeManagerMqServer"
+          type="TradeHub.TradeManager.CommunicationManager.Service.TradeManagerMqServer,TradeHub.TradeManager.CommunicationManager"
+          singleton="true">
+    <constructor-arg index="0" value="TradeManagerMqConfig.xml"/>
+  </object>
+
+  <object id="ExecutionHandler"
+          type="TradeHub.TradeManager.Server.Service.ExecutionHandler,TradeHub.TradeManager.Server"
+          singleton="true"/>
+
+  <object id="ApplicationController"
+          type="TradeHub.TradeManager.Server.Service.ApplicationController,TradeHub.TradeManager.Server"
+          singleton="true">
+    <constructor-arg index="0" ref="TradeManagerMqServer"/>
+    <constructor-arg index="1" ref="ExecutionHandler"/>
+  </object>
+</objects>

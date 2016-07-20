@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="TradeHub.StrategyRunner.UserInterface.StatsModule.View.StatsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto" >
+                <ListView Width="auto"
+                          Height="500"
+                BorderThickness="1" 
+                AlternationCount="2"
+                IsSynchronizedWithCurrentItem="True" 
+                Margin="0,0,0,0"                 
+                ItemsSource="{Binding OrdersCollection}">
+                    <ListView.View>
+                        <GridView 
+                        AllowsColumnReorder="true" 
+                        ColumnHeaderToolTip="Orders.">
+                            <GridViewColumn 
+                            Header="PROVIDER" 
+                            Width="65"
+                            DisplayMemberBinding="{Binding OrderExecutionProvider}"/>
+                            <GridViewColumn 
+                            Header="EXECUTION TIME" 
+                            Width="105"
+                            DisplayMemberBinding="{Binding Fill.ExecutionDateTime}"/>
+                            <GridViewColumn 
+                            Header="SYMBOL" 
+                            Width="55"
+                            DisplayMemberBinding="{Binding Order.Security.Symbol}"/>
+                            <GridViewColumn 
+                            Header="SIDE" 
+                            Width="45" 
+                            DisplayMemberBinding="{Binding Order.OrderSide}"/>
+                            <GridViewColumn 
+                            Header="SHARES" 
+                            Width="60" 
+                            DisplayMemberBinding="{Binding Order.OrderSize}"/>
+                            <GridViewColumn 
+                            Header="EXECUTION SIZE" 
+                            Width="105" 
+                            DisplayMemberBinding="{Binding Fill.ExecutionSize}"/>
+                            <GridViewColumn 
+                            Header="EXECUTION PRICE" 
+                            Width="105" 
+                            DisplayMemberBinding="{Binding Fill.ExecutionPrice}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ScrollViewer>
+    </Grid>
+</UserControl>

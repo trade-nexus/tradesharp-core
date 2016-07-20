@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<RabbitMQ>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>orderexecution_exchange</Exchange>
+  
+  <LoginQueue>orderexecution_engine_login_queue</LoginQueue>
+  <LoginRoutingKey>orderexecution.engine.login</LoginRoutingKey>
+  <LogoutQueue>orderexecution_engine_logout_queue</LogoutQueue>
+  <LogoutRoutingKey>orderexecution.engine.logout</LogoutRoutingKey>
+  
+  <InquiryQueue>orderexecution_engine_inquiry_queue</InquiryQueue>
+  <InquiryRoutingKey>orderexecution.engine.inquiry</InquiryRoutingKey>
+  
+  <AppInfoQueue>orderexecution_engine_appinfo_queue</AppInfoQueue>
+  <AppInfoRoutingKey>orderexecution.engine.appinfo</AppInfoRoutingKey>
+  
+  <HeartbeatQueue>orderexecution_engine_heartbeat_queue</HeartbeatQueue>
+  <HeartbeatRoutingKey>orderexecution.engine.heartbeat</HeartbeatRoutingKey>
+
+
+  <OrderRequestQueue>orderexecution_engine_orderrequest_queue</OrderRequestQueue>
+  <OrderRequestRoutingKey>orderexecution.engine.orderrequest</OrderRequestRoutingKey>
+  
+  <LimitOrderQueue>orderexecution_engine_limitorder_queue</LimitOrderQueue>
+  <LimitOrderRoutingKey>orderexecution.engine.limitorder</LimitOrderRoutingKey>
+  <MarketOrderQueue>orderexecution_engine_marketorder_queue</MarketOrderQueue>
+  <MarketOrderRoutingKey>orderexecution.engine.marketorder</MarketOrderRoutingKey>
+  <StopOrderQueue>orderexecution_engine_stoporder_queue</StopOrderQueue>
+  <StopOrderRoutingKey>orderexecution.engine.stoporder</StopOrderRoutingKey>
+  <StopLimitOrderQueue>orderexecution_engine_stoplimitorder_queue</StopLimitOrderQueue>
+  <StopLimitOrderRoutingKey>orderexecution.engine.stoplimitorder</StopLimitOrderRoutingKey>
+
+  <LocateResponseQueue>orderexecution_engine_locateresponse_queue</LocateResponseQueue>
+  <LocateResponseRoutingKey>orderexecution.engine.locateresponse</LocateResponseRoutingKey>
+  
+  <CancelOrderQueue>orderexecution_engine_cancelorder_queue</CancelOrderQueue>
+  <CancelOrderRoutingKey>orderexecution.engine.cancelorder</CancelOrderRoutingKey>
+
+  <PositionRoutingKey>orderexecution.engine.position</PositionRoutingKey>
+</RabbitMQ>

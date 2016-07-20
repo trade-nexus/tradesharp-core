@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  
+  <object id="Shell" type="TradeHub.StrategyRunner.UserInterface.Shell.ApplicationShell,TradeHub.StrategyRunner.UserInterface.Shell" singleton="true"/>
+  
+  <object id="OptimizationShell" type="TradeHub.StrategyRunner.UserInterface.OptimizationShell.Shell,TradeHub.StrategyRunner.UserInterface.OptimizationShell" singleton="false"/>
+  
+  <object id="GeneticAlgoShell" type="TradeHub.StrategyRunner.UserInterface.GeneticAlgoShell.GeneticAlgoShell,TradeHub.StrategyRunner.UserInterface.GeneticAlgoShell" singleton="false"/>
+
+  <object id="SettingsPanelViewModel" type="TradeHub.StrategyRunner.UserInterface.SettingsModule.ViewModel.SettingsPanelViewModel,TradeHub.StrategyRunner.UserInterface.SettingsModule"/>
+  <object id="SettingsPanelView" type="TradeHub.StrategyRunner.UserInterface.SettingsModule.View.SettingsPanel" singleton="true">
+    <constructor-arg index="0" ref="SettingsPanelViewModel"/>
+  </object>
+
+  <object id="SettingsWindowViewModel" type="TradeHub.StrategyRunner.UserInterface.SettingsModule.ViewModel.SettingsWindowViewModel,TradeHub.StrategyRunner.UserInterface.SettingsModule" singleton="false"/>
+  <object id="SettingsWindowView" type="TradeHub.StrategyRunner.UserInterface.SettingsModule.View.SettingsWindow" singleton="false">
+    <constructor-arg index="0" ref="SettingsWindowViewModel"/>
+  </object>
+  
+  <object id="SearchViewModel" type="TradeHub.StrategyRunner.UserInterface.SearchModule.ViewModel.SearchViewModel"/>
+  <object id="SearchView" type="TradeHub.StrategyRunner.UserInterface.SearchModule.View.SearchView" singleton="true">
+    <constructor-arg index="0" ref="SearchViewModel"/>
+  </object>
+  
+  <object id="StatsViewModel" type="TradeHub.StrategyRunner.UserInterface.StatsModule.ViewModel.StatsViewModel"/>
+  <object id="StatsView" type="TradeHub.StrategyRunner.UserInterface.StatsModule.View.StatsView" singleton="true">
+    <constructor-arg index="0" ref="StatsViewModel"/>
+  </object>
+
+  <object id="StrategyViewModel" type="TradeHub.StrategyRunner.UserInterface.StrategyModule.ViewModel.StrategyViewModel"/>
+  <object id="StrategyView" type="TradeHub.StrategyRunner.UserInterface.StrategyModule.View.StrategyView" singleton="true">
+    <constructor-arg index="0" ref="StrategyViewModel"/>
+  </object>
+
+  <object id="ConstructorViewModel" type="TradeHub.StrategyRunner.UserInterface.SearchModule.ViewModel.ConstructorViewModel" singleton="false"/>
+  <object id="ConstructorView" type="TradeHub.StrategyRunner.UserInterface.SearchModule.View.ConstructorView" singleton="false"/>
+
+  <object id="ParametersViewModel" type="TradeHub.StrategyRunner.UserInterface.ParametersModule.ViewModel.ParametersViewModel,TradeHub.StrategyRunner.UserInterface.ParametersModule"/>
+  <object id="ParametersView" type="TradeHub.StrategyRunner.UserInterface.ParametersModule.View.ParametersView" singleton="true">
+    <constructor-arg index="0" ref="ParametersViewModel"/>
+  </object>
+
+  <object id="OptimizationStatsViewModel" type="TradeHub.StrategyRunner.UserInterface.OptimizedStatsModule.ViewModel.OptimizationStatsViewModel,TradeHub.StrategyRunner.UserInterface.OptimizedStatsModule"/>
+  <object id="OptimizationStatsView" type="TradeHub.StrategyRunner.UserInterface.OptimizedStatsModule.View.OptimizationStatsView" singleton="true">
+    <constructor-arg index="0" ref="OptimizationStatsViewModel"/>
+  </object>
+
+  <object id="GaParametersViewModel" type="TradeHub.StrategyRunner.UserInterface.GaParametersModule.ViewModel.GaParametersViewModel,TradeHub.StrategyRunner.UserInterface.GaParametersModule"/>
+  <object id="GaParametersView" type="TradeHub.StrategyRunner.UserInterface.GaParametersModule.View.GaParametersView,TradeHub.StrategyRunner.UserInterface.GaParametersModule" singleton="true">
+    <constructor-arg index="0" ref="GaParametersViewModel"/>
+  </object>
+
+  <object id="GaStatsViewModel" type="TradeHub.StrategyRunner.UserInterface.GaStatsModule.ViewModel.GaStatsViewModel,TradeHub.StrategyRunner.UserInterface.GaStatsModule"/>
+  <object id="GaStatsView" type="TradeHub.StrategyRunner.UserInterface.GaStatsModule.View.GaStatsView,TradeHub.StrategyRunner.UserInterface.GaStatsModule" singleton="true">
+    <constructor-arg index="0" ref="GaStatsViewModel"/>
+  </object>
+
+</objects>

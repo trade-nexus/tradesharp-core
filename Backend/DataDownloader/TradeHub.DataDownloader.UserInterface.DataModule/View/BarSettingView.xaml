@@ -1,0 +1,27 @@
+﻿<Window x:Class="TradeHub.DataDownloader.UserInterface.DataModule.View.BarSettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Height="300" Width="300" Title="Bar Setting">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Bar Format" Grid.Column="0" Grid.Row="0" FontSize="20" VerticalAlignment="Center"  Margin="20 0 0 0"/>
+        <ComboBox IsEnabled="{Binding IsControlsEnabled,Mode=TwoWay}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Margin="10 0 10 0" ItemsSource="{Binding BarFormates}" SelectedValue="{Binding SelectedFormate,Mode=TwoWay}" />
+        <TextBlock Text="Bar Length" Grid.Column="0" Grid.Row="1" FontSize="20" VerticalAlignment="Center"  Margin="20 0 0 0"/>
+        <TextBox IsEnabled="{Binding IsControlsEnabled,Mode=TwoWay}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="10 0 10 0" Text="{Binding BarLength}" />
+        <TextBlock Text="Pip Size" Grid.Column="0" Grid.Row="2" FontSize="20" VerticalAlignment="Center"  Margin="20 0 0 0"/>
+        <TextBox IsEnabled="{Binding IsControlsEnabled,Mode=TwoWay}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="10 0 10 0" Text="{Binding PipSize}" />
+        <TextBlock Text="Bar PriceType" Grid.Column="0" Grid.Row="3" FontSize="20" VerticalAlignment="Center"  Margin="20 0 0 0"/>
+        <ComboBox IsEnabled="{Binding IsControlsEnabled,Mode=TwoWay}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="10 0 10 0" ItemsSource="{Binding BarTypes}" SelectedValue="{Binding SelectedType,Mode=TwoWay}"/>
+        <Button IsEnabled="{Binding IsControlsEnabled,Mode=TwoWay}" Click="OnSave" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Submit" MinWidth="100" Command="{Binding SaveSettings}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24541682-52D0-4E08-AB4F-047CA76E6E26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeHub.Common.Core</RootNamespace>
+    <AssemblyName>TradeHub.Common.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assertions\AssertionConcern.cs" />
+    <Compile Include="Constants\AdminMessageType.cs" />
+    <Compile Include="Constants\BarPriceType.cs" />
+    <Compile Include="Constants\BarType.cs" />
+    <Compile Include="Constants\ConnectionStatus.cs" />
+    <Compile Include="Constants\BarFormat.cs" />
+    <Compile Include="Constants\Currency.cs" />
+    <Compile Include="Constants\Direction.cs" />
+    <Compile Include="Constants\DirectoryStructure.cs" />
+    <Compile Include="Constants\Duration.cs" />
+    <Compile Include="Constants\ExecutionType.cs" />
+    <Compile Include="Constants\InquiryTags.cs" />
+    <Compile Include="Constants\Market.cs" />
+    <Compile Include="Constants\MarketData.cs" />
+    <Compile Include="Constants\MarketDataProvider.cs" />
+    <Compile Include="Constants\MarketDataType.cs" />
+    <Compile Include="Constants\OrderExecutionProvider.cs" />
+    <Compile Include="Constants\OrderSide.cs" />
+    <Compile Include="Constants\OrderStatus.cs" />
+    <Compile Include="Constants\OrderTif.cs" />
+    <Compile Include="Constants\TimePeriod.cs" />
+    <Compile Include="Constants\TradeSide.cs" />
+    <Compile Include="Constants\TransactionType.cs" />
+    <Compile Include="Constants\WindowServiceConstant.cs" />
+    <Compile Include="CustomAttributes\TradeHubAttributes.cs" />
+    <Compile Include="DomainModels\Account.cs" />
+    <Compile Include="DomainModels\Bar.cs" />
+    <Compile Include="DomainModels\Forex.cs" />
+    <Compile Include="DomainModels\ForexFuture.cs" />
+    <Compile Include="DomainModels\Future.cs" />
+    <Compile Include="DomainModels\HistoricBarData.cs" />
+    <Compile Include="DomainModels\OrderDomain\Fill.cs" />
+    <Compile Include="DomainModels\OrderDomain\Execution.cs" />
+    <Compile Include="DomainModels\OrderDomain\LimitOrder.cs" />
+    <Compile Include="DomainModels\MarketDataEvent.cs" />
+    <Compile Include="DomainModels\OrderDomain\LocateResponse.cs" />
+    <Compile Include="DomainModels\OrderDomain\OrderEvent.cs" />
+    <Compile Include="DomainModels\OrderDomain\ProfitLossStats.cs" />
+    <Compile Include="DomainModels\OrderDomain\Rejection.cs" />
+    <Compile Include="DomainModels\OrderDomain\Trade.cs" />
+    <Compile Include="DomainModels\PositionType.cs" />
+    <Compile Include="DomainModels\StrategyStatus.cs" />
+    <Compile Include="FactoryMethods\OrderMessage.cs" />
+    <Compile Include="FactoryMethods\SubscriptionMessage.cs" />
+    <Compile Include="Interfaces\IPrint.cs" />
+    <Compile Include="MarketDataProvider\IHistoricBarDataProvider.cs" />
+    <Compile Include="MarketDataProvider\ILiveBarDataProvider.cs" />
+    <Compile Include="MarketDataProvider\IHistoricTickDataProvider.cs" />
+    <Compile Include="MarketDataProvider\ILiveTickDataProvider.cs" />
+    <Compile Include="OrderExecutionProvider\ILimitOrderProvider.cs" />
+    <Compile Include="OrderExecutionProvider\IMarketOrderProvider.cs" />
+    <Compile Include="OrderExecutionProvider\IOrderExecutionProvider.cs" />
+    <Compile Include="Repositories\IEntityKey.cs" />
+    <Compile Include="Repositories\IFillRepository.cs" />
+    <Compile Include="Repositories\IOrderRepository.cs" />
+    <Compile Include="Repositories\IPersistRepository.cs" />
+    <Compile Include="Repositories\IReadOnlyRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\ISecurityRepository.cs" />
+    <Compile Include="Repositories\IStrategyRepository.cs" />
+    <Compile Include="Repositories\ITradeRepository.cs" />
+    <Compile Include="Repositories\Parameters\FillParameters.cs" />
+    <Compile Include="Repositories\Parameters\OrderParameters.cs" />
+    <Compile Include="Repositories\Parameters\TradeParameters.cs" />
+    <Compile Include="Utility\ApplicationIdGenerator.cs" />
+    <Compile Include="Utility\EnumUtility.cs" />
+    <Compile Include="Utility\IMarketDataIdGenerator.cs" />
+    <Compile Include="Utility\IOrderIdGenerator.cs" />
+    <Compile Include="Utility\MarketDataIdGenerator.cs" />
+    <Compile Include="Utility\ParameterReader.cs" />
+    <Compile Include="Utility\ReadOnlyConcurrentDictionary.cs" />
+    <Compile Include="Utility\StreamConversion.cs" />
+    <Compile Include="ValueObjects\AdminMessages\IAdminMessage.cs" />
+    <Compile Include="ValueObjects\AdminMessages\Login.cs" />
+    <Compile Include="ValueObjects\AdminMessages\Logout.cs" />
+    <Compile Include="ValueObjects\ClientMqParameters.cs" />
+    <Compile Include="ValueObjects\Heartbeat\HeartbeatMessage.cs" />
+    <Compile Include="ValueObjects\Inquiry\InquiryMessage.cs" />
+    <Compile Include="ValueObjects\Inquiry\InquiryResponse.cs" />
+    <Compile Include="ValueObjects\Inquiry\MarketDataProviderInfo.cs" />
+    <Compile Include="ValueObjects\MarketData\BarDataRequest.cs" />
+    <Compile Include="ValueObjects\MarketData\HistoricDataRequest.cs" />
+    <Compile Include="ValueObjects\MarketData\IMarketDataRequest.cs" />
+    <Compile Include="ValueObjects\MarketData\Subscribe.cs" />
+    <Compile Include="ValueObjects\MarketData\Unsubscribe.cs" />
+    <Compile Include="DomainModels\OrderDomain\MarketOrder.cs" />
+    <Compile Include="DomainModels\Option.cs" />
+    <Compile Include="DomainModels\OrderDomain\Order.cs" />
+    <Compile Include="DomainModels\Position.cs" />
+    <Compile Include="DomainModels\Security.cs" />
+    <Compile Include="DomainModels\OrderDomain\SimpleOrder.cs" />
+    <Compile Include="DomainModels\Stock.cs" />
+    <Compile Include="DomainModels\OrderDomain\StopLimitOrder.cs" />
+    <Compile Include="DomainModels\StopOrder.cs" />
+    <Compile Include="DomainModels\Strategy.cs" />
+    <Compile Include="DomainModels\Subscription.cs" />
+    <Compile Include="DomainModels\Tick.cs" />
+    <Compile Include="DomainModels\Transaction.cs" />
+    <Compile Include="MarketDataProvider\IMarketDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueObjects\MessageQueueObject.cs" />
+    <Compile Include="ValueObjects\RabbitMqRequestMessage.cs" />
+    <Compile Include="ValueObjects\RabbitMqResponseMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoggerConfig.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <description>
+    The object definition for Integral order execution provider
+  </description>
+  
+  <object id="IntegralOrderExecutionProvider" type="TradeHub.OrderExecutionProvider.Integral.Provider.IntegralOrderExecutionProvider, TradeHub.OrderExecutionProvider.Integral"/>
+  
+</objects>

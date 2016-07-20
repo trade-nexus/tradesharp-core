@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <description>
+    The object definition for Redi market data provider
+  </description>
+
+  <object id="RediMarketDataProvider" type="TradeHub.MarketDataProvider.Redi.Provider.RediMarketDataProvider, TradeHub.MarketDataProvider.Redi">
+  </object>
+  
+</objects>

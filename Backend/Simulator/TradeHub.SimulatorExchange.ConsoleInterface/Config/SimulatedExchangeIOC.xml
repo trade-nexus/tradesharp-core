@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  
+  <object id="CommunicationController" type="TradeHub.SimulatedExchange.SimulatorControler.CommunicationController,TradeHub.SimulatedExchange.SimulatorControler" singleton="true"/>
+  
+  <object id="ReadMarketData" type="TradeHub.SimulatedExchange.FileReader.ReadMarketData,TradeHub.SimulatedExchange.FileReader" singleton="true"/>
+  
+  <object id="SimulateMarketOrder" type="TradeHub.SimulatedExchange.SimulatorControler.SimulateMarketOrder,TradeHub.SimulatedExchange.SimulatorControler"/>
+  <object id="SimulateLimitOrder" type="TradeHub.SimulatedExchange.SimulatorControler.SimulateLimitOrder,TradeHub.SimulatedExchange.SimulatorControler"/>
+  
+  <object id="FetchData" type="TradeHub.SimulatedExchange.SimulatorControler.FetchData,TradeHub.SimulatedExchange.SimulatorControler" singleton="true">
+    <constructor-arg index="0" ref="ReadMarketData"/>
+    <property name ="MarketDataControler" ref="MarketDataControler"/>
+    <property name ="SimulatedOrderController" ref="SimulatedOrderController"/>
+  </object>
+  
+  <object id="MarketDataControler" type="TradeHub.SimulatedExchange.SimulatorControler.MarketDataControler,TradeHub.SimulatedExchange.SimulatorControler" singleton="true">
+    <constructor-arg index="0" ref="FetchData"/>
+    <constructor-arg index="1" ref="CommunicationController"/>
+  </object>
+
+  <object id="SimulatedOrderController" type="TradeHub.SimulatedExchange.SimulatorControler.SimulatedOrderController,TradeHub.SimulatedExchange.SimulatorControler" singleton="true">  
+    <constructor-arg index="0" ref="CommunicationController"/>
+    <constructor-arg index="1" ref="SimulateMarketOrder"/>
+    <constructor-arg index="2" ref="SimulateLimitOrder"/>
+  </object>
+</objects>

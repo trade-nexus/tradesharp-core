@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+ 
+  <?include Includes\Variables.wxi?>
+  
+  <Product Id="*" Name="$(var.ProductName)" Language="1033" Version="$(var.ProductVersion)" Manufacturer="Aurora Solutions" UpgradeCode="a5417a16-67cf-4696-8270-4042d7755a4a">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+    <!--Adding Logo in Program & Features-->
+    <Icon Id="Logo.ico" SourceFile="Resources\Logo.ico" />
+    <Property Id="ARPPRODUCTICON" Value="Logo.ico" />
+    <Property Id="ARPHELPLINK" Value="http://www.aurorasolutions.org/" />
+    <!--Reboot computer after installation-->
+    <!--<Property Id="REBOOT" Value="Force" />-->
+    
+    <!--Include binary for custom script to uninstall log files-->
+    <Binary Id="TradeHub.Installer.UninstallLogs.CA.dll" src="..\TradeHub.Installer.UninstallLogs\bin\Release\TradeHub.Installer.UninstallLogs.CA.dll" />
+    <CustomAction Id="RemoveTradeHubLogs" Return="check" Execute="commit" BinaryKey="TradeHub.Installer.UninstallLogs.CA.dll" DllEntry="RemoveLogs" />
+    <CustomAction Id="LaunchApp" Return="check" Directory="TradeHub.IS" ExeCommand="[SystemFolder]cmd.exe /C TradeHub.Installer.Configuration.exe" Execute="commit" />
+    <CustomAction Id="TemplateInstall" Return="check" Directory="TradeHub.TS" ExeCommand="[SystemFolder]cmd.exe /C TradeHub.Installer.TemplateInstaller.vsix" Execute="commit" />
+    
+    <!--Batch Executor Commands-->
+    <!--<CustomAction Id="BatchCmd1"
+                  Property="BatchRun1"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-WebServerRole"' 
+                  Execute='immediate' 
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchCmd2"
+                  Property="BatchRun2"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-WebServer"' 
+                  Execute='immediate' 
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchCmd3"
+                  Property="BatchRun3"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-CommonHttpFeatures"' 
+                  Execute='immediate' 
+                  Return='check'>
+    </CustomAction>
+                    
+    <CustomAction Id="BatchCmd4"
+                  Property="BatchRun4"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-StaticContent"' 
+                  Execute='immediate' 
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd5"
+                  Property="BatchRun5"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-DefaultDocument"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd6"
+                  Property="BatchRun6"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-DirectoryBrowsing"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd7"
+                  Property="BatchRun7"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-HttpErrors"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd8"
+                  Property="BatchRun8"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ApplicationDevelopment"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd9"
+                  Property="BatchRun9"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-Security"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd10"
+                  Property="BatchRun10"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-RequestFiltering"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+                  
+    <CustomAction Id="BatchCmd11"
+                  Property="BatchRun11"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:NetFx3"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd12"
+                  Property="BatchRun12"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:NetFx4Extended-ASPNET45"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchCmd13"
+                  Property="BatchRun13"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-NetFxExtensibility"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd14"
+                  Property="BatchRun14"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-NetFxExtensibility45"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd15"
+                  Property="BatchRun15"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ISAPIExtensions"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd16"
+                  Property="BatchRun16"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ISAPIFilter"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchCmd17"
+                  Property="BatchRun17"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ASP"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd18"
+                  Property="BatchRun18"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ASPNET"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd19"
+                  Property="BatchRun19"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ASPNET45"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd20"
+                  Property="BatchRun20"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-HealthAndDiagnostics"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd21"
+                  Property="BatchRun21"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-HttpLogging"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd22"
+                  Property="BatchRun22"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-LoggingLibraries"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd23"
+                  Property="BatchRun23"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-RequestMonitor"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd24"
+                  Property="BatchRun24"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-HttpCompressionStatic"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+
+    <CustomAction Id="BatchCmd25"
+                  Property="BatchRun25"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-WebServerManagementTools"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchCmd26"
+                  Property="BatchRun26"
+                  Value='"[WindowsFolder]Sysnative\dism.exe" /Online /Enable-Feature /FeatureName:IIS-ManagementConsole"'
+                  Execute='immediate'
+                  Return='check'>
+    </CustomAction>
+    
+    <CustomAction Id="BatchRun1" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun2" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun3" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun4" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun5" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun6" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun7" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun8" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun9" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun10" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun11" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun12" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun13" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun14" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun15" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun16" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun17" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun18" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun19" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun20" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun21" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun22" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun23" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun24" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun25" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="BatchRun26" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Return="check" Impersonate="no"/>-->
+    
+    <!--Add Features-->
+		<Feature Id="feaProductFeature.MDE" Title="Market Data Engine" Level="1" ConfigurableDirectory="INSTALLFOLDER"  Absent="disallow">
+      <ComponentRef Id="cmpMdeServiceTrade"/>
+      <ComponentGroupRef Id="TradeHub.MDE" />
+		</Feature>
+    <Feature Id="feaProductFeature.OEE" Title="Order Execution Engine" Level="1" ConfigurableDirectory="INSTALLFOLDER" Absent="disallow">
+      <ComponentRef Id="cmpOeeServiceTrade"/>
+      <ComponentGroupRef Id="TradeHub.OEE" />
+    </Feature>
+    <Feature Id="feaProductFeature.PE" Title="Position Engine" Level="1" ConfigurableDirectory="INSTALLFOLDER"  Absent="disallow">
+      <ComponentRef Id="cmpPeServiceTrade"/>
+      <ComponentGroupRef Id="TradeHub.PE" />
+    </Feature>
+    <Feature Id="feaProductFeature.TM" Title="Trade Manager" Level="1" ConfigurableDirectory="INSTALLFOLDER"  Absent="disallow">
+      <ComponentRef Id="cmpTmServiceTrade"/>
+      <ComponentGroupRef Id="TradeHub.TM" />
+    </Feature>
+    <Feature Id="feaProductFeature.UI" Title="User Interface" Level="1" ConfigurableDirectory="INSTALLFOLDER"  Absent="disallow">
+      <ComponentGroupRef Id="TradeHub.UI" />
+    </Feature>
+    <!--<Feature Id="feaProductFeature.IS" Title="Installer Config" Absent="disallow" >
+      <ComponentGroupRef Id="TradeHub.IS" />
+    </Feature>-->
+    <Feature Id="feaProductFeature.TS" Title="Strategy Template" Absent="disallow" >
+      <ComponentGroupRef Id="TradeHub.TS" />
+    </Feature>
+    <Feature Id="feaStartMenuShortcuts" Title="Shortcuts" Level="1" ConfigurableDirectory="INSTALLFOLDER"  Absent="disallow">
+      <ComponentRef Id="ProgramMenuShortcutsComponent" />
+      
+    </Feature>
+    
+    <!--Add Webpage-->
+    <!--<Feature Id="ProductFeature" Title="DemoWebsite.Setup" Level="1">
+      <ComponentGroupRef Id="MyWebWebComponents" />
+      <ComponentGroupRef Id="DemoWebsiteIssConfiguration" />
+    </Feature>-->
+    
+    <!--Copy content for Webpage-->
+    <!--<Feature Id="ProductFeature.WPR" Title="Website Pre Req" Level="1" ConfigurableDirectory="INSTALLFOLDER" Absent="disallow">
+      <ComponentGroupRef Id="WebsitePreReq" />
+    </Feature>-->
+    
+    <!--Adding Terms of License File-->
+    <WixVariable Id="WixUILicenseRtf"
+                      Value="Resources\License.rtf" />
+    <!--Wix UI Tree Feature-->
+    <UIRef Id="WixUI_FeatureTree"/>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="DATALOCATION">
+        <Directory Id="INSTALLFOLDER">
+          <Directory Id="AuroaSolDir" Name="AuroraSolutions">
+          <Directory Id="TradeHubDir" Name="TradeSharp" >
+            <Directory Id="TradeHub.MDE" Name="Market Data Engine" />
+            <Directory Id="TradeHub.OEE" Name="Order Execution Engine" />
+            <Directory Id="TradeHub.PE" Name="Position Engine" />
+            <Directory Id="TradeHub.TM" Name="Trade Manager" />
+            <Directory Id="TradeHub.IS" Name="Installer Config" />
+            <Directory Id="TradeHub.TS" Name="Strategy Template" />
+            <Directory Id="TradeHub.UI" Name="TradeSharp User Interface"/>
+          </Directory>
+          <!--<Directory Id="WebsitePreReq" Name="WebsitePreReq" />-->
+          </Directory>
+        </Directory>
+        <Directory Id="ProgramMenuFolder">
+            <Directory Id="ProgramMenuTradeHubFolder" Name="TradeHub">
+            <Directory Id="ProgramMenuMDEFolder" Name="MDE" />
+            <Directory Id="ProgramMenuOEEFolder" Name="OEE" />
+            <Directory Id="ProgramMenuPEFolder" Name="PE" />
+            </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="WWWROOT">
+          <Directory Id="MYWEBWEBSITE" Name="MyWebDirectory">
+          </Directory>
+        </Directory>
+    </Directory>
+    <CustomAction Id="SetDataLocationDefault" Property="DATALOCATION"
+Value="[WindowsVolume]" />
+    <InstallExecuteSequence>
+      <Custom Action="SetDataLocationDefault" After="CostInitialize" />
+      <!--<ScheduleReboot After="InstallFinalize"/>-->
+      <!--exeucute custom script during uninstall to delete log files-->
+      <Custom Action="RemoveTradeHubLogs" Before="InstallFinalize"> Installed AND NOT UPGRADINGPRODUCTCODE </Custom>
+      <!--exeucute custom script during install to configure app and to install template in visual studio-->
+      <!--<Custom Action="TemplateInstall" Before="InstallFinalize">NOT REMOVE</Custom>-->
+      <!--<Custom Action="LaunchApp" Before="InstallFinalize">NOT REMOVE</Custom>-->
+      <!--<Custom Action="BatchCmd1" After="InstallInitialize">NOT Installed</Custom>
+      <Custom Action="BatchCmd2" After="BatchCmd1">NOT Installed</Custom>
+      <Custom Action="BatchCmd3" After="BatchCmd2">NOT Installed</Custom>
+      <Custom Action="BatchCmd4" After="BatchCmd3">NOT Installed</Custom>
+      <Custom Action="BatchCmd5" After="BatchCmd4">NOT Installed</Custom>
+      <Custom Action="BatchCmd6" After="BatchCmd5">NOT Installed</Custom>
+      <Custom Action="BatchCmd7" After="BatchCmd6">NOT Installed</Custom>
+      <Custom Action="BatchCmd8" After="BatchCmd7">NOT Installed</Custom>
+      <Custom Action="BatchCmd9" After="BatchCmd8">NOT Installed</Custom>
+      <Custom Action="BatchCmd10" After="BatchCmd9">NOT Installed</Custom>
+      <Custom Action="BatchCmd11" After="BatchCmd10">NOT Installed</Custom>
+      <Custom Action="BatchCmd12" After="BatchCmd11">NOT Installed</Custom>
+      <Custom Action="BatchCmd13" After="BatchCmd12">NOT Installed</Custom>
+      <Custom Action="BatchCmd14" After="BatchCmd13">NOT Installed</Custom>
+      <Custom Action="BatchCmd15" After="BatchCmd14">NOT Installed</Custom>
+      <Custom Action="BatchCmd16" After="BatchCmd15">NOT Installed</Custom>
+      <Custom Action="BatchCmd17" After="BatchCmd16">NOT Installed</Custom>
+      <Custom Action="BatchCmd18" After="BatchCmd17">NOT Installed</Custom>
+      <Custom Action="BatchCmd19" After="BatchCmd18">NOT Installed</Custom>
+      <Custom Action="BatchCmd20" After="BatchCmd19">NOT Installed</Custom>
+      <Custom Action="BatchCmd21" After="BatchCmd20">NOT Installed</Custom>
+      <Custom Action="BatchCmd22" After="BatchCmd21">NOT Installed</Custom>
+      <Custom Action="BatchCmd23" After="BatchCmd22">NOT Installed</Custom>
+      <Custom Action="BatchCmd24" After="BatchCmd23">NOT Installed</Custom>
+      <Custom Action="BatchCmd25" After="BatchCmd24">NOT Installed</Custom>
+      <Custom Action="BatchCmd26" After="BatchCmd25">NOT Installed</Custom>
+      <Custom Action="BatchRun1" After="BatchCmd26">NOT Installed</Custom>
+      <Custom Action="BatchRun2" After="BatchRun1">NOT Installed</Custom>
+      <Custom Action="BatchRun3" After="BatchRun2">NOT Installed</Custom>
+      <Custom Action="BatchRun4" After="BatchRun3">NOT Installed</Custom>
+      <Custom Action="BatchRun5" After="BatchRun4">NOT Installed</Custom>
+      <Custom Action="BatchRun6" After="BatchRun5">NOT Installed</Custom>
+      <Custom Action="BatchRun7" After="BatchRun6">NOT Installed</Custom>
+      <Custom Action="BatchRun8" After="BatchRun7">NOT Installed</Custom>
+      <Custom Action="BatchRun9" After="BatchRun8">NOT Installed</Custom>
+      <Custom Action="BatchRun10" After="BatchRun9">NOT Installed</Custom>
+      <Custom Action="BatchRun11" After="BatchRun10">NOT Installed</Custom>
+      <Custom Action="BatchRun12" After="BatchRun11">NOT Installed</Custom>
+      <Custom Action="BatchRun13" After="BatchRun12">NOT Installed</Custom>
+      <Custom Action="BatchRun14" After="BatchRun13">NOT Installed</Custom>
+      <Custom Action="BatchRun15" After="BatchRun14">NOT Installed</Custom>
+      <Custom Action="BatchRun16" After="BatchRun15">NOT Installed</Custom>
+      <Custom Action="BatchRun17" After="BatchRun16">NOT Installed</Custom>
+      <Custom Action="BatchRun18" After="BatchRun17">NOT Installed</Custom>
+      <Custom Action="BatchRun19" After="BatchRun18">NOT Installed</Custom>
+      <Custom Action="BatchRun20" After="BatchRun19">NOT Installed</Custom>
+      <Custom Action="BatchRun21" After="BatchRun20">NOT Installed</Custom>
+      <Custom Action="BatchRun22" After="BatchRun21">NOT Installed</Custom>
+      <Custom Action="BatchRun23" After="BatchRun22">NOT Installed</Custom>
+      <Custom Action="BatchRun24" After="BatchRun23">NOT Installed</Custom>
+      <Custom Action="BatchRun25" After="BatchRun24">NOT Installed</Custom>
+      <Custom Action="BatchRun26" After="BatchRun25">NOT Installed</Custom>-->
+    </InstallExecuteSequence>
+    <InstallUISequence>
+      <Custom Action="SetDataLocationDefault" After="CostInitialize" />
+    </InstallUISequence>
+  
+     <Property Id="WWWROOT">
+       c:\inetpub\wwwroot\
+     </Property>
+  </Fragment>
+  <!--Window Service for MDE-->
+  <Fragment>
+   
+     <DirectoryRef Id="TradeHub.MDE">
+       
+      <Component
+          Id="cmpMdeServiceTrade"
+          Guid="3D3DE5C1-7154-4c61-9816-248A85F6DEBF">
+      
+        <File
+           Id="filMdeService.exe"
+           Name="TradeHub.MarketDataEngine.Server.WindowsService.exe"
+           KeyPath="yes"
+           Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.exe" />
+        
+        <ServiceInstall
+           Id="svcService"
+           Name="TradeHub MarketDataEngine Service"
+           DisplayName="TradeHub MarketDataEngine Service"
+           Description="TradeHub MarketDataEngine Service"
+           Start="auto"
+           ErrorControl="normal"
+           Type="ownProcess" />
+        <ServiceControl
+                Id="svc_MdeService"
+                Name="TradeHub MarketDataEngine Service"
+                Start="install"
+                Stop="both"
+                Remove="uninstall"
+                Wait="yes" />
+      </Component>
+       </DirectoryRef>
+  </Fragment>
+  <!--Window Service for OEE-->
+  <Fragment>
+    <DirectoryRef Id="TradeHub.OEE">
+      <Component
+          Id="cmpOeeServiceTrade"
+          Guid="FEF6C0EC-5A76-4CB6-AD89-652B49A32584">
+
+        <File
+           Id="filOeeService.exe"
+           Name="TradeHub.OrderExecutionEngine.Server.WindowsService.exe"
+           KeyPath="yes"
+           Source="$(var.OEEDir)\TradeHub.OrderExecutionEngine.Server.WindowsService.exe" />
+
+        <ServiceInstall
+           Id="svcOeeService"
+           Name="TradeHub OrderExecutionEngine Service"
+           DisplayName="TradeHub OrderExecutionEngine Service"
+           Description="TradeHub OrderExecutionEngine Service"
+           Start="auto"
+           ErrorControl="normal"
+           Type="ownProcess" />
+        <ServiceControl
+                Id="svc_OeeWindowsService"
+                Name="TradeHub OrderExecutionEngine Service"
+                Start="install"
+                Stop="both"
+                Remove="uninstall"
+                Wait="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <!--Window Service for PE-->
+  <Fragment>
+
+    <DirectoryRef Id="TradeHub.PE">
+
+      <Component
+          Id="cmpPeServiceTrade"
+          Guid="C46CE786-B74E-496B-9D74-77105E94408B">
+
+        <File
+           Id="filPeService.exe"
+           Name="TradeHub.PositionEngine.Service.exe"
+           KeyPath="yes"
+           Source="$(var.PEDir)\TradeHub.PositionEngine.Service.exe" />
+
+        <ServiceInstall
+           Id="svcPeService"
+           Name="TradeHub PositionEngine Service"
+           DisplayName="TradeHub PositionEngine Service"
+           Description="TradeHub PositionEngine Service"
+           Start="auto"
+           ErrorControl="normal"
+           Type="ownProcess" />
+        <ServiceControl
+                Id="svc_PeService"
+                Name="TradeHub PositionEngine Service"
+                Start="install"
+                Stop="both"
+                Remove="uninstall"
+                Wait="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <!--Window Service for TM-->
+  <Fragment>
+
+    <DirectoryRef Id="TradeHub.TM">
+
+      <Component
+          Id="cmpTmServiceTrade"
+          Guid="6215B38F-A2E3-4710-989E-E60561E03B68">
+
+        <File
+           Id="filTmService.exe"
+           Name="TradeHub.TradeManager.Server.WindowsService.exe"
+           KeyPath="yes"
+           Source="$(var.TMDir)\TradeHub.TradeManager.Server.WindowsService.exe" />
+
+        <ServiceInstall
+           Id="svcTMService"
+           Name="TradeHub Trade Manager Service"
+           DisplayName="TradeHub Trade Manager Service"
+           Description="TradeHub Trade Manager Service"
+           Start="auto"
+           ErrorControl="normal"
+           Type="ownProcess" />
+        <ServiceControl
+                Id="svc_TmService"
+                Name="TradeHub Trade Manager Service"
+                Start="install"
+                Stop="both"
+                Remove="uninstall"
+                Wait="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  
+  <Fragment>
+    <DirectoryRef Id="ProgramMenuTradeHubFolder">
+      <Component Id="ProgramMenuShortcutsComponent" Guid="D2C522BE-87D4-470B-AAF8-28A8E45C5BB6">
+         <!-- create folders -->
+         <CreateFolder Directory="ProgramMenuTradeHubFolder" />
+         <CreateFolder Directory="ProgramMenuMDEFolder" />
+         <CreateFolder Directory="ProgramMenuOEEFolder" />
+         <!-- remove folder -->
+         <RemoveFolder Id="RemoveProgramMenuTradeHubFolder"
+            Directory="ProgramMenuTradeHubFolder"
+            On="uninstall" />
+         <RemoveFolder Id="RemoveProgramMenuMDEFolder"
+            Directory="ProgramMenuMDEFolder"
+            On="uninstall" />
+         <RemoveFolder Id="RemoveProgramMenuOEEFolder"
+            Directory="ProgramMenuOEEFolder"
+            On="uninstall" />
+        <RemoveFolder Id="RemoveProgramMenuPEFolder"
+            Directory="ProgramMenuPEFolder"
+            On="uninstall" />
+        
+         <!-- main shortcut -->
+       <Shortcut Id="startOEEServiceStartMenuShortcut"
+                    Name="TradeHub OEEService Start"
+                    Description="TradeHub OEEService Start"
+                    Target="[TradeHub.OEE]StartOEEService.bat" Directory="ProgramMenuOEEFolder" />
+        <Shortcut Id="stopOEEServiceStartMenuShortcut"
+                    Name="TradeHub OEEService Stop"
+                    Description="TradeHub OEEService Stop"
+                    Target="[TradeHub.OEE]StopOEEService.bat" Directory="ProgramMenuOEEFolder" />
+        <Shortcut Id="startMDEServiceStartMenuShortcut"
+                    Name="TradeHub MDEService Start"
+                    Description="TradeHub MDEService Start"
+                    Target="[TradeHub.MDE]StartMDEService.bat" Directory="ProgramMenuMDEFolder" />
+        <Shortcut Id="stopMDEServiceStartMenuShortcut"
+                    Name="TradeHub MDEService Stop"
+                    Description="TradeHub MDEService Stop"
+                    Target="[TradeHub.MDE]StopMDEService.bat" Directory="ProgramMenuMDEFolder"/>
+        <Shortcut Id="startPEServiceStartMenuShortcut"
+                   Name="TradeHub PEService Start"
+                   Description="TradeHub PEService Start"
+                   Target="[TradeHub.PE]StartPEService.bat" Directory="ProgramMenuPEFolder"/>
+        <Shortcut Id="stopPEServiceStartMenuShortcut"
+                   Name="TradeHub PEService Stop"
+                   Description="TradeHub PEService Stop"
+                   Target="[TradeHub.PE]StopPEService.bat" Directory="ProgramMenuPEFolder"/>
+      
+         <!--
+            RegistryValue whichs serves as KeyPath
+         -->
+         <RegistryValue
+            Root="HKCU"
+            Key="Software\AuroraSolutions\TradeHub"
+            Name="InstalledStartMenuShortcuts"
+            Type="integer"
+            Value="1" />
+      </Component>
+   </DirectoryRef>
+  </Fragment>
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+
+  <!--Admin Panel for TradeSharp-->
+  <!--<Fragment>
+      <Directory Id="TARGETDIR" Name="SourceDir">
+        <Directory Id="WWWROOT">
+          <Directory Id="MYWEBWEBSITE" Name="MyWebDirectory">
+          </Directory>
+        </Directory>
+      </Directory>
+      <Property Id="WWWROOT">
+       c:\inetpub\wwwroot\
+      </Property>
+	</Fragment>-->
+</Wix>

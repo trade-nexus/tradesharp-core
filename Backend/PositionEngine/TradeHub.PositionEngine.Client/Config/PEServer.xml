@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<RabbitMQ>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>position_exchange</Exchange>
+  <InquiryRoutingKey>position.engine.inquiry</InquiryRoutingKey>
+  <AppInfoRoutingKey>position.engine.appinfo</AppInfoRoutingKey>
+  <ProviderRequestRoutingKey>position.engine.provider.request</ProviderRequestRoutingKey>
+</RabbitMQ>

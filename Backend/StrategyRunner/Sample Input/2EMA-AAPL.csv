@@ -1,0 +1,3 @@
+Short EMA,Long EMA,EMA Price Type,Symbol,Bar Length,Bar Format ,Bar Price Type,Market Data Provider,Order Execution Provider
+2,4,HIGH,AAPL,6,TIME,ASK,SimulatedExchange,SimulatedExchange
+3,5,LOW,IBM,7,TIME,BID,SimulatedExchange,SimulatedExchange

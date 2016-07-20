@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.TS">
+            <Directory Id="dir5B7D42AD3765C501012776B390B9B985" Name="ProjectTemplates" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.TS">
+            <Component Id="cmp4C37683D14374249257490E9315AE20A" Directory="TradeHub.TS" Guid="749F3F0B-D505-4CF3-A219-DD09FCAC1EFC">
+                <File Id="filB997D45D82436BAA19795922B04A58B6" KeyPath="yes" Source="$(var.TSDir)\EnvDTE.dll" />
+            </Component>
+            <Component Id="cmp49FBF1C65F56D92072F5438DAB6FA166" Directory="TradeHub.TS" Guid="6639BF10-6684-4A23-B0F6-FB8D2D4EB8E4">
+                <File Id="fil9116FC818A34D2024845A28193C7F10C" KeyPath="yes" Source="$(var.TSDir)\EnvDTE.xml" />
+            </Component>
+            <Component Id="cmp1F5F649571AB2CA38FE11E82976A254F" Directory="TradeHub.TS" Guid="09D585C5-627E-4516-90A3-9EB516867C4D">
+                <File Id="fil6E9C13D03E25F93821FD7C4043468F03" KeyPath="yes" Source="$(var.TSDir)\extension.vsixmanifest" />
+            </Component>
+            <Component Id="cmpD6AD5E543EAD20AE01CFFC5B74D885B9" Directory="TradeHub.TS" Guid="06752FBF-22A4-42DD-87C3-9F13B43E0087">
+                <File Id="fil75A5661C377AABE1D198FC4238956257" KeyPath="yes" Source="$(var.TSDir)\Microsoft.MSXML.dll" />
+            </Component>
+            <Component Id="cmpC1729E418F95FB845D83A1E530C33CAC" Directory="TradeHub.TS" Guid="D37C1F54-97CE-41EA-B3A0-8FF5ADB25E96">
+                <File Id="filD017583BC7BBC877D9915124FE0A3824" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.ComponentModelHost.dll" />
+            </Component>
+            <Component Id="cmp348D2A80E1E876AA6E04FBD964D78315" Directory="TradeHub.TS" Guid="1565A628-4663-4DC9-BFBC-0AE791C14941">
+                <File Id="fil8C9BF6145C0DF2488AB560C4D6FA4467" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.GraphModel.dll" />
+            </Component>
+            <Component Id="cmp13ACCACE56A217F8997055A764168D47" Directory="TradeHub.TS" Guid="8B2B4336-A270-4E6F-A4B2-DE135A9B4E5C">
+                <File Id="fil5538C7658B57E2C42E553E61672A7B4F" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.OLE.Interop.dll" />
+            </Component>
+            <Component Id="cmp16CEBDD3EC872045AFC4FDE415ABF079" Directory="TradeHub.TS" Guid="B4398B02-ECD9-4301-A2BE-86EA6C0CA682">
+                <File Id="fil04A95A99DAE0F444C05884E3DED550B9" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.OLE.Interop.xml" />
+            </Component>
+            <Component Id="cmp4B3CD69703803E6CE1B68856EA9F4375" Directory="TradeHub.TS" Guid="92A1C60E-0D5E-493B-A9B0-E5FA692412D7">
+                <File Id="fil1813DC84CEEFC3314DDB2164BB777840" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.ProjectAggregator.dll" />
+            </Component>
+            <Component Id="cmp35E92F88DBB52A4AD568DF1E9329A9B5" Directory="TradeHub.TS" Guid="92151032-848A-4D10-BD8E-8CC3808955C3">
+                <File Id="fil128AA2CD155200A2CF8EC7330BEAC767" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.ProjectAggregator.xml" />
+            </Component>
+            <Component Id="cmp7BED98851BEBD83C90BE69BAE06BFD37" Directory="TradeHub.TS" Guid="28EF618A-DFBE-4017-A5BA-C206E10101F5">
+                <File Id="fil1DC8D0D1EDB6ABB54F46DFDB188F9122" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Immutable.10.0.dll" />
+            </Component>
+            <Component Id="cmp2845EE3DD03B91119024BAF948DC8DBF" Directory="TradeHub.TS" Guid="40E5FCA6-F63F-49E7-8213-A135022C62E0">
+                <File Id="filEB731E376D9A214460ACBE9D2FBD24E4" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Immutable.10.0.xml" />
+            </Component>
+            <Component Id="cmp4C182218326840950EF5AA8D6C952449" Directory="TradeHub.TS" Guid="E8B8EB76-1E70-4DB1-81CA-AE637D1B2CE4">
+                <File Id="fil6B087F498709BFA4EA951649D0102C7C" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Immutable.11.0.dll" />
+            </Component>
+            <Component Id="cmpE62D0C1F1B14986E6F2DFA647D809E99" Directory="TradeHub.TS" Guid="4D94F8A7-562D-43B0-8E19-26851B0DA743">
+                <File Id="fil59BFC4414306F3DD4A4C1DC0A3578145" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Immutable.11.0.xml" />
+            </Component>
+            <Component Id="cmpEECA34083A23CF9253CC289A3E02A0B5" Directory="TradeHub.TS" Guid="402F8FE3-C607-4F0E-9D7F-38F5008BB4EC">
+                <File Id="fil7DE17A4B1336E30FDD390BFEDC17A57F" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+            </Component>
+            <Component Id="cmp9877C1C1486E705D23AE5CEB5540E5A3" Directory="TradeHub.TS" Guid="13E83A30-DC9D-450D-A893-D8BE65445091">
+                <File Id="filE8260720B39CF6A63A1F63E708A51967" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.10.0.xml" />
+            </Component>
+            <Component Id="cmp34E1F7E4168FC67A2F9BDBCD499178EA" Directory="TradeHub.TS" Guid="E0DD2E5D-F807-4846-B042-A01BCE96C35D">
+                <File Id="fil056FF0FA2DC2F4F47AF6AEC953A6B33A" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+            </Component>
+            <Component Id="cmp258F5A5152517FCDE206860E1927FF5C" Directory="TradeHub.TS" Guid="50CD4739-559C-47F8-B77F-A34874988463">
+                <File Id="filBCFE145B8A37A59D60EE01CD2468F622" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.8.0.xml" />
+            </Component>
+            <Component Id="cmp71D11C2064790E10283B569A1AF07E17" Directory="TradeHub.TS" Guid="5F784DDC-505F-42F9-A676-F79BB0EF5500">
+                <File Id="fil85D07044C99F2EC1D6BB3AAF5463771B" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
+            </Component>
+            <Component Id="cmp33E23A1E3118106C2F8FA49737193F68" Directory="TradeHub.TS" Guid="E3FF5C0E-3AA7-4377-905D-8FAE6CD8A537">
+                <File Id="fil483EE5756949ED0EFF069B0CC8A088E9" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.9.0.xml" />
+            </Component>
+            <Component Id="cmp40512337082630EAA2A722181C5388CE" Directory="TradeHub.TS" Guid="9ECE4424-5F95-415F-9FD8-A080BFE202D4">
+                <File Id="fil031EA2E56BB45EB512593D3A34AF89C2" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.dll" />
+            </Component>
+            <Component Id="cmp5EDD9E6E61B7FDA157309091A22A83D8" Directory="TradeHub.TS" Guid="C1C11F54-1DC1-48D6-98AD-C40BC9F373A3">
+                <File Id="filFCE4D5CB1B53EAB5ADA6C2A889CC66F5" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.Shell.Interop.xml" />
+            </Component>
+            <Component Id="cmpDD2F965BC52F7EA5C44A88608B057A49" Directory="TradeHub.TS" Guid="5EC461CD-9714-42F5-8F59-D00F824C1D69">
+                <File Id="fil57CED51974C82EDAD765153B9582724D" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+            </Component>
+            <Component Id="cmpB07DDE47DD0C83A06984874048589A3F" Directory="TradeHub.TS" Guid="9F1AF361-6897-4017-BAB1-D4100139ED22">
+                <File Id="filA7739A078D572C50DE3E12BAB002CE48" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
+            </Component>
+            <Component Id="cmpCB20F5661BC547871891E709D1F59EEC" Directory="TradeHub.TS" Guid="D9C39997-9134-479A-B39E-C0A06910A921">
+                <File Id="fil8A7940AF1E037913311C4CF50367186A" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.TextManager.Interop.dll" />
+            </Component>
+            <Component Id="cmp6E1115F5E7566EF48322A6EBDA2A3283" Directory="TradeHub.TS" Guid="4B0B38B0-31C3-4D73-AF65-7F81DC9FCDEA">
+                <File Id="fil1C94B661C42B83191BA16D5EBCAA0929" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.TextManager.Interop.xml" />
+            </Component>
+            <Component Id="cmpB302FAFF30BA915F1B281505CF1277DA" Directory="TradeHub.TS" Guid="5A7BD374-199B-48AE-90BB-E03ED7B72815">
+                <File Id="fil41A5BF2308BEB1C9BABFE3DED52F59CF" KeyPath="yes" Source="$(var.TSDir)\Microsoft.VisualStudio.VSHelp.dll" />
+            </Component>
+            <Component Id="cmpDF79F01B69EC5B729EDB1CCFD3ABE11D" Directory="TradeHub.TS" Guid="AA407ED4-2632-447F-99DF-B52E1BF94224">
+                <File Id="fil1B5AA41831AD520B54C720EBF911B0B7" KeyPath="yes" Source="$(var.TSDir)\stdole.dll" />
+            </Component>
+            <Component Id="cmp866B41AC28DB371D5E6694EC2592A504" Directory="TradeHub.TS" Guid="36BB837F-321A-4FF4-B188-8AFA6BED02CC">
+                <File Id="fil1D4229E081D3C26F03521011143BF09D" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.dll" />
+            </Component>
+            <Component Id="cmpB7CB64ABE2D463CC8CD6BB82689D891C" Directory="TradeHub.TS" Guid="608959E8-F041-4CFC-84E8-7331CB380E46">
+                <File Id="fil44AF9DBD52D70BCCAA78D9F7FB7F120E" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.dll.CodeAnalysisLog.xml" />
+            </Component>
+            <Component Id="cmpD252D7209537ACFE543CB9B1F0FADFFF" Directory="TradeHub.TS" Guid="19566FB4-6953-44BF-BB66-34C6F6731084">
+                <File Id="fil723E34DBB7601742A7EAF809AEC3AEAC" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.dll.lastcodeanalysissucceeded" />
+            </Component>
+            <Component Id="cmp2DB2D65476AC803B5D80381180EF5178" Directory="TradeHub.TS" Guid="F71647EA-6AA6-4900-96A1-93BD06B32A59">
+                <File Id="filCEB4A0779A6BB31E4D999E7786510E46" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.pdb" />
+            </Component>
+            <Component Id="cmp3D1D0AFF0A5289056EE6C0A7A996918A" Directory="TradeHub.TS" Guid="33E4DA9A-4069-4648-BDB2-CF3FB0C4A98C">
+                <File Id="filC945ED86890449ECD2A9ED57E8A16EA8" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.pkgdef" />
+            </Component>
+            <Component Id="cmpB0089A358C97CFC6CA03BE2B11EDF47E" Directory="TradeHub.TS" Guid="3A395EA7-4F94-4F73-9A63-38B4B6932B3B">
+                <File Id="filF99262439B2726AA3B9E5C122C1AA550" KeyPath="yes" Source="$(var.TSDir)\TradeHub.Installer.TemplateInstaller.vsix" />
+            </Component>
+            <Component Id="cmpFA42E0EAB81810A3BD705B53374F5D9A" Directory="dir5B7D42AD3765C501012776B390B9B985" Guid="E7BD59B1-C71D-4CD6-8059-5676B053E921">
+                <File Id="filDBB91F401C50B6A74362B9331C163B92" KeyPath="yes" Source="$(var.TSDir)\ProjectTemplates\TradeSharpStrategy.zip" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

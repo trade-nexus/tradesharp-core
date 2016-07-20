@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09E9D8A3-6B2B-4566-A698-12A58CBF5AAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeHub.DataDownloader.ApplicationCenter</RootNamespace>
+    <AssemblyName>TradeHub.DataDownloader.ApplicationCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Atomic">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Atomic.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor.Scheduler">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MarketDataResponseHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Core\TradeHub.Common.Core.csproj">
+      <Project>{24541682-52D0-4E08-AB4F-047CA76E6E26}</Project>
+      <Name>TradeHub.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MarketDataEngine\TradeHub.MarketDataEngine.Client\TradeHub.MarketDataEngine.Client.csproj">
+      <Project>{1cddebfb-717e-4cc1-b4e0-49be216152fc}</Project>
+      <Name>TradeHub.MarketDataEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.HistoricalData\TradeHub.StrategyEngine.HistoricalData.csproj">
+      <Project>{30db28b2-bd47-4760-af22-9f755defec4c}</Project>
+      <Name>TradeHub.StrategyEngine.HistoricalData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StrategyEngine\TradeHub.StrategyEngine.MarketData\TradeHub.StrategyEngine.MarketData.csproj">
+      <Project>{10b68988-4bd1-4528-b9c5-8fd5512c8a3d}</Project>
+      <Name>TradeHub.StrategyEngine.MarketData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.DataDownloader.BinaryFileWriter\TradeHub.DataDownloader.BinaryFileWriter.csproj">
+      <Project>{CCE7EBB0-7D22-4E4B-BDBE-7D548E3A0F3E}</Project>
+      <Name>TradeHub.DataDownloader.BinaryFileWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.DataDownloader.Common\TradeHub.DataDownloader.Common.csproj">
+      <Project>{15B56CFB-FBF2-4A6F-9BB1-F4E075A99E8C}</Project>
+      <Name>TradeHub.DataDownloader.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.DataDownloader.CsvFileWriter\TradeHub.DataDownloader.CsvFileWriter.csproj">
+      <Project>{1ECB7F03-F533-42B7-8D77-B47F0835FC4B}</Project>
+      <Name>TradeHub.DataDownloader.CsvFileWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.DataDownloader.UserInterface.Common\TradeHub.DataDownloader.UserInterface.Common.csproj">
+      <Project>{05DD8462-00C9-41AC-AF7E-E6DCAE4B1D36}</Project>
+      <Name>TradeHub.DataDownloader.UserInterface.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoggerConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

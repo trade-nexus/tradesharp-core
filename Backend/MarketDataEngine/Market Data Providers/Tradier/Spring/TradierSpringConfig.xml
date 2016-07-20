@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <description>
+    The object definition for Tradier market data provider
+  </description>
+
+  <object id="TradierMarketDataProvider" type="TradeHub.MarketDataProvider.Tradier.Provider.TradierMarketDataProvider, TradeHub.MarketDataProvider.Tradier">
+  </object>
+  
+</objects>

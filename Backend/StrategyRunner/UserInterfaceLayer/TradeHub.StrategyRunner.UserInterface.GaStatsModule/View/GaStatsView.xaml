@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="TradeHub.StrategyRunner.UserInterface.GaStatsModule.View.GaStatsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>-->
+        <DataGrid Grid.Row="1" x:Name="dataGrid1" Grid.ColumnSpan="1" Height="300" Width="300" AutoGenerateColumns="False" CanUserAddRows="False" BorderThickness="2" VerticalAlignment="Top" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" IsReadOnly="True">
+            <DataGrid.Columns>
+            <DataGridTextColumn Header="Property" Binding="{Binding Discription}" Width="80"/>
+            <DataGridTextColumn Header="Value" Binding="{Binding ParameterValue}" Width="190"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--<ScrollViewer Grid.Column="0" Grid.Row="1"
+            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <ListView AlternationCount="2" Width="160" ItemsSource="{Binding ParametersInfo}" HorizontalAlignment="Left" Grid.Row="1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Property"
+                                        Width="80"
+                                        DisplayMemberBinding="{Binding Discription}">
+                            
+                        </GridViewColumn>
+                        <GridViewColumn Header="Value"
+                                        Width="80"
+                                        DisplayMemberBinding="{Binding ParameterValue}">
+                            
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>-->
+        
+        <Grid Grid.Row="0">
+            <!--<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>-->
+            <Label Content="Risk Measure: " Grid.Column="0" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left"></Label>
+            <TextBox Text="{Binding Pnl}" Grid.Column="0" Width="100"  Height="25" IsEnabled="False"
+                     HorizontalAlignment="Left" VerticalAlignment="Center"
+                     HorizontalContentAlignment="Left" Margin="90,0,0,0"></TextBox>
+            <Button Content="EXPORT" Grid.Row="0" Grid.Column="0"
+                Height="25" Width="80" Command="{Binding ExportResult}"
+                HorizontalAlignment="Right"></Button>
+        </Grid>
+    </Grid>
+</UserControl>

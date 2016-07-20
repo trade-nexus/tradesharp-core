@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+	<?define ProductVersion="1.0.82.0" ?>
+  <?define ShortcutsPath="C:\Code Repo\Trade Hub\Installer\TradeHub.Installer.Core\"?>
+  <?if $(var.Platform) = x64 ?>
+  <?define ProductName = "TradeSharp" ?>
+  <?define Win64 = "yes" ?>
+  <?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+<?else ?>
+  <?define ProductName = "TradeSharp" ?>
+  <?define Win64 = "no" ?>
+  <?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+<?endif ?>
+</Include>

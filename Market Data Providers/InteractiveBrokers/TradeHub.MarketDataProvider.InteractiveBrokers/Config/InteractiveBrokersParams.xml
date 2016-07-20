@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InteractiveBrokers>
+  <Host>localhost</Host>
+  <Port>7496</Port>
+  <ClientID>5300</ClientID>
+</InteractiveBrokers>

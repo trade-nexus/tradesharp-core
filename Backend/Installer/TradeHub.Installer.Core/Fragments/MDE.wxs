@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.MDE">
+            <Directory Id="dir899679299B1C3B2F9E79DDEBB8569DD9" Name="Config" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.MDE">
+            <Component Id="cmp468434A07264D9BC2E1B0A359B383E04" Directory="TradeHub.MDE" Guid="5990DCD9-868F-42C5-BAA1-98A659948AA6">
+                <File Id="fil551909E05E3B0C56C37126E412140DB3" KeyPath="yes" Source="$(var.MyDir)\Atomic.dll" />
+            </Component>
+            <Component Id="cmp98DF53E40D339BA67949475BE28251E1" Directory="TradeHub.MDE" Guid="61CC7073-4E2D-4D9E-88FF-456AB5176B8D">
+                <File Id="fil1916E76BFFF9E91075D30995F1CE9B8D" KeyPath="yes" Source="$(var.MyDir)\Atomic.xml" />
+            </Component>
+            <Component Id="cmp08F0689BEAE380498118416A51066698" Directory="TradeHub.MDE" Guid="9AD20727-76EF-46B5-942A-2DB1C7433CD2">
+                <File Id="fil44048694F1A04E69B35EB7584ECCA558" KeyPath="yes" Source="$(var.MyDir)\Blackwood.Framework.dll" />
+            </Component>
+            <Component Id="cmp374B64BFA11F19902215FB88BF8BC1EE" Directory="TradeHub.MDE" Guid="077EFE6D-88B4-406E-80AB-FFC3DD882F94">
+                <File Id="fil6B3972F05B117F8457241AC377E75C4A" KeyPath="yes" Source="$(var.MyDir)\Blackwood.Framework.xml" />
+            </Component>
+            <Component Id="cmpFD0DFABC93B86760C2E15E0CF009BA5A" Directory="TradeHub.MDE" Guid="A97E02AB-C94E-4133-BA80-2FA62B74DEA0">
+                <File Id="filBA0A022008A09BD33A9811912D7BCAFF" KeyPath="yes" Source="$(var.MyDir)\CBWMessages.dll" />
+            </Component>
+            <Component Id="cmp18F5533F76E575377CB98876D8527499" Directory="TradeHub.MDE" Guid="C46F8C8F-4E51-4702-A2F6-CB7A761D2606">
+                <File Id="fil886165870E4EF95FFE34AC2DF0D48044" KeyPath="yes" Source="$(var.MyDir)\clrzmq-ext.dll" />
+            </Component>
+            <Component Id="cmpD7E2D01837ED68049D2DF2284BF7C06A" Directory="TradeHub.MDE" Guid="12D43F9B-31B2-48D0-9014-5E544C2F9DED">
+                <File Id="filD2C9A73258F897EC128C7D27F981631D" KeyPath="yes" Source="$(var.MyDir)\clrzmq-ext.xml" />
+            </Component>
+            <Component Id="cmp7CA515AEB5225F617434EFA85DDAB9B3" Directory="TradeHub.MDE" Guid="5E6AAA73-3103-4623-A12F-111D66F75145">
+                <File Id="filB37D54F7D31359C5AEDB5EC1272A8D07" KeyPath="yes" Source="$(var.MyDir)\clrzmq.dll" />
+            </Component>
+            <Component Id="cmp3C5BAD02833F804910F7582B6BABC693" Directory="TradeHub.MDE" Guid="9F3A3D04-14CC-44AD-9106-4CBDFE056047">
+                <File Id="filD0D19AF3FF61E1867861F65F7FA0E147" KeyPath="yes" Source="$(var.MyDir)\clrzmq.xml" />
+            </Component>
+            <Component Id="cmpF51268A98498DC67D4916B111A961AB1" Directory="TradeHub.MDE" Guid="512B9850-0FD8-47DD-A8E4-29D4112EAB3B">
+                <File Id="fil1A4A26A13BA68525C09ED37EE594D8F6" KeyPath="yes" Source="$(var.MyDir)\Common.Logging.dll" />
+            </Component>
+            <Component Id="cmpEF4A5F7F624D6AA5D410A0EDEF8E1881" Directory="TradeHub.MDE" Guid="02373A75-ABCD-493D-8851-96790A3AD756">
+                <File Id="fil6E87760B3A1763B703BA2065CFF2D051" KeyPath="yes" Source="$(var.MyDir)\Disruptor.dll" />
+            </Component>
+            <Component Id="cmp67C64C28DF476D6B3F5B9C23BF0AD79B" Directory="TradeHub.MDE" Guid="DDC393F1-2F7C-41F5-81FF-8BF8E9D62BB2">
+                <File Id="filCB7718A4F79D8C4C217314399E4E1ADA" KeyPath="yes" Source="$(var.MyDir)\Disruptor.xml" />
+            </Component>
+            <Component Id="cmp4C238F5DA2FB613421D612E0BA304988" Directory="TradeHub.MDE" Guid="1D097D9D-9281-4213-8656-A2C301401C3F">
+                <File Id="fil4D458F853CE18E623AC659697E86C603" KeyPath="yes" Source="$(var.MyDir)\EasyNetQ.dll" />
+            </Component>
+            <Component Id="cmp54E0714F5823B41F0A279E4813930577" Directory="TradeHub.MDE" Guid="DC946BB9-8C56-4653-98D3-68A357535DC8">
+                <File Id="filC44026801CA6BB95E56E5BEAB4670D8C" KeyPath="yes" Source="$(var.MyDir)\FIX44.xml" />
+            </Component>
+            <Component Id="cmp56EEA75AF13D54BEA12097B1FB0E28A6" Directory="TradeHub.MDE" Guid="694DB8DF-21D7-44C6-AB2B-E58F01B676E7">
+                <File Id="filE2BF3650E1CCD58E03B2C26A14CE7BA4" KeyPath="yes" Source="$(var.MyDir)\InstallUtil.InstallLog" />
+            </Component>
+            <Component Id="cmp7D987089FB3FE36124C993C5A47BBEAF" Directory="TradeHub.MDE" Guid="DDC09D4B-09DD-4024-BC10-DB89708618AA">
+                <File Id="fil1E9F040F8CA400ACCC2113493C44ADFC" KeyPath="yes" Source="$(var.MyDir)\libzmq.dll" />
+            </Component>
+            <Component Id="cmp61C3E0560E64487B05B76DF45D628BB9" Directory="TradeHub.MDE" Guid="DFB71F75-B43E-4900-A7D2-D7309146169C">
+                <File Id="filD8A89D6087BC93C395F261AF3D55C6E8" KeyPath="yes" Source="$(var.MyDir)\LoggerConfig.xml" />
+            </Component>
+            <Component Id="cmpD5CDFA31DC18F5A1563235EC56BC17F4" Directory="TradeHub.MDE" Guid="9BBB0083-6D06-4682-A08B-13017B1688A2">
+                <File Id="fil6C1FDFE68AB877497C216BB18687FA56" KeyPath="yes" Source="$(var.MyDir)\Messages.dll" />
+            </Component>
+            <Component Id="cmpAA56895F6706AE753E5A7EEEB3C18253" Directory="TradeHub.MDE" Guid="93433683-84C4-45D0-9897-189175D1170B">
+                <File Id="filFF66D55E789091381C1BB1CFC78650F2" KeyPath="yes" Source="$(var.MyDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp9FF3212B6EF7CC92483ADC1357671C1A" Directory="TradeHub.MDE" Guid="0D86F47B-4668-44AD-BCD0-28AEEB245D3B">
+                <File Id="fil78CADBAA94DFC21BFEDC554C7B388672" KeyPath="yes" Source="$(var.MyDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmp982F450CD8114B2FE442B2916D36C9CB" Directory="TradeHub.MDE" Guid="CE865C27-169C-4606-BF37-4B2F3F9FB439">
+                <File Id="filCF198E0135F9DA7CFB83B6766AA27051" KeyPath="yes" Source="$(var.MyDir)\QuickFix.dll" />
+            </Component>
+            <Component Id="cmp83A239C9D64B8811277067985881A978" Directory="TradeHub.MDE" Guid="1B56FD70-EF75-4311-BD56-4630795D4D86">
+                <File Id="fil5FFB68861944F511696CF896A42C609B" KeyPath="yes" Source="$(var.MyDir)\RabbitMQ.Client.dll" />
+            </Component>
+            <Component Id="cmp5C2158153FA34BB6DA0F20B8264B8BFB" Directory="TradeHub.MDE" Guid="9CEB8937-8CF2-4E34-A21C-B49E6DA30E9B">
+                <File Id="filEEBB245A8F2EA4F61072618396706E28" KeyPath="yes" Source="$(var.MyDir)\RabbitMQ.Client.xml" />
+            </Component>
+            <Component Id="cmpBD2E3CF25CD9E8C1A5A732DDD96E53AB" Directory="TradeHub.MDE" Guid="32E313C5-ED57-49A4-A139-1C9FF9256BD8">
+                <File Id="fil6616B96288D5BA0EA58853E719BE4972" KeyPath="yes" Source="$(var.MyDir)\Spring.Aop.dll" />
+            </Component>
+            <Component Id="cmpE7B284F8BCA8ABBE8C292C045C1C4827" Directory="TradeHub.MDE" Guid="4A6A82B8-52DC-49F2-ADA0-A961F7F28C62">
+                <File Id="fil8324C3531FBCAC9E37B9625CDD3C44C3" KeyPath="yes" Source="$(var.MyDir)\Spring.Aop.xml" />
+            </Component>
+            <Component Id="cmpF0D111DC0503E53C31C311ACC1275556" Directory="TradeHub.MDE" Guid="ED60E071-B976-4ABC-B0E3-8C1F739E0728">
+                <File Id="fil5FCA3B7FE90A89A8F0D3F96F0722D3F0" KeyPath="yes" Source="$(var.MyDir)\Spring.Core.dll" />
+            </Component>
+            <Component Id="cmpA2CAABE851CDEFD7313DDCE3C7E7D29D" Directory="TradeHub.MDE" Guid="0FC02C6B-D148-43EE-9788-AFEB4BF2C5A5">
+                <File Id="filCBC55EA7C0A14C7446E04AE1F7D0372C" KeyPath="yes" Source="$(var.MyDir)\Spring.Core.xml" />
+            </Component>
+            <Component Id="cmpC0BB4A0985DCD38FD7B7960D8D33B811" Directory="TradeHub.MDE" Guid="00AB345C-CEB4-4587-AFC0-837C8785B273">
+                <File Id="filB6F8C28D51AA68CE50A3DC82BC4116CA" KeyPath="yes" Source="$(var.MyDir)\Spring.Data.dll" />
+            </Component>
+            <Component Id="cmpB63F1350A4ECF11BF537D47B1F5154A5" Directory="TradeHub.MDE" Guid="55FA1E44-2D87-4024-9D1D-3739C25E2FEC">
+                <File Id="fil02D962789174E4CABEFDCE4CA8806E78" KeyPath="yes" Source="$(var.MyDir)\Spring.Data.xml" />
+            </Component>
+            <Component Id="cmp1565B91D8F2D7274ADFE7EDD82C63D01" Directory="TradeHub.MDE" Guid="B7797E85-BDD1-4006-BD7F-8C076C5A5E85">
+                <File Id="filF097784C8839FFE1AF8E8D125C7899C5" KeyPath="yes" Source="$(var.MyDir)\TraceSourceLogger.dll" />
+            </Component>
+            <Component Id="cmp18B196653E3BA4084B6D7478F2794667" Directory="TradeHub.MDE" Guid="90D1888D-579A-4982-8499-0C4DFF36462E">
+                <File Id="fil839951B7E252A0E8B63EF91FDAF71865" KeyPath="yes" Source="$(var.MyDir)\TradeHub.Common.Core.dll" />
+            </Component>
+            <Component Id="cmpE88322BB7423A08EBEC03A972C754810" Directory="TradeHub.MDE" Guid="30EA7027-E7F3-488E-A099-E576CCF853DC">
+                <File Id="fil193515947B468EB03D32E804EB6E210E" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.BarFactory.dll" />
+            </Component>
+            <Component Id="cmpF2FF8C6E90F074417BFA8BD2F430316A" Directory="TradeHub.MDE" Guid="007129C2-E678-44ED-B989-E90B7A3EACAD">
+                <File Id="fil9BC615B177E932F1D16C6987534C0817" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Configuration.dll" />
+            </Component>
+            <Component Id="cmp5A8E2FD84ED3A4475BBDB64A7DED0893" Directory="TradeHub.MDE" Guid="5B92EC4E-E717-490A-BD4B-7B90E2BD3D14">
+                <File Id="fil58439C3A342EA8DEEA32F021379EB8E5" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.MarketDataProviderGateway.dll" />
+            </Component>
+            <Component Id="cmp30A26A20746407A645AE061C8808A787" Directory="TradeHub.MDE" Guid="359A4499-00C5-41B6-A789-A429F2CAE5C0">
+                <File Id="fil0FC9B3B23653EA35329858A57759A738" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.dll" />
+            </Component>
+            <Component Id="cmp67DB0ACEC4EF8D67DAC2E41757226BDF" Directory="TradeHub.MDE" Guid="C38EF5CD-062A-4D4D-AAAF-A7631102ACC5">
+                <File Id="fil1F80CA9A4680F6AA120ACFD13ED0C481" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.exe" />
+            </Component>
+            <Component Id="cmpBF315BA6C8F5FDA8023DC529C0AA86BE" Directory="TradeHub.MDE" Guid="6CF8845C-E3F1-4341-8D9B-66C595C64934">
+                <File Id="fil6F18E12C42E89A9C43B70ADDFB06A0BB" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.exe.config" />
+            </Component>
+            <Component Id="cmp5917E492538F97157E76ACEB05790AFB" Directory="TradeHub.MDE" Guid="60142A88-5F7C-4CF0-B9D2-CEC29E5B5A93">
+                <File Id="fil37BAE0D65ED0A242ECBEFE9952E0BB46" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.InstallLog" />
+            </Component>
+            <Component Id="cmp9BD69451D042990A11C0918F70B9CFD2" Directory="TradeHub.MDE" Guid="9A47096F-BA80-475B-9460-AF9CA364A8F4">
+                <File Id="fil7F43044F27E7006593309BDB237B694A" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.vshost.exe" />
+            </Component>
+            <Component Id="cmp872E6D9D8F4AB1413015E83FD862C3B7" Directory="TradeHub.MDE" Guid="9DAB2B3E-41D2-48CC-B84A-9D969D990091">
+                <File Id="filA3BBFF300118B58B77619164BCA91DA1" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.vshost.exe.config" />
+            </Component>
+            <Component Id="cmp01F1B4C1568EB3DDE34C14902BF8EA68" Directory="TradeHub.MDE" Guid="358DF1FF-73E3-4BD4-B1DF-77BA9B52BF94">
+                <File Id="filF6145301EC5B93BF6A7A9E2817044804" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataEngine.Server.WindowsService.vshost.exe.manifest" />
+            </Component>
+            <Component Id="cmpDC0DD6199619359C4BAB91BE94D6FAA1" Directory="TradeHub.MDE" Guid="8E106AC3-67E9-4E5F-B350-38E4CBECF63E">
+                <File Id="filFD7EEEBBDCFE48315B3086D6F7740233" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataProvider.Blackwood.dll" />
+            </Component>
+            <Component Id="cmp7D2CC761B685D7294FCF63D14A44298E" Directory="TradeHub.MDE" Guid="B3FFC968-4E3F-4BF6-9A89-9B2E6F125BF5">
+                <File Id="fil7CB3ACD650046C423F864250366D21DB" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataProvider.Blackwood.pdb" />
+            </Component>
+            <Component Id="cmpA6EF70C40BFDE1DB5C5B2D9BFDA9F490" Directory="TradeHub.MDE" Guid="86236041-B553-4FBE-B2ED-3C67F62FC45B">
+                <File Id="filC1DE5E292522A0283C46DA53DF3BC5FA" KeyPath="yes" Source="$(var.MyDir)\TradeHub.MarketDataProvider.Simulator.dll" />
+            </Component>
+            <Component Id="cmp162464915C2115BC380E9A87D1587068" Directory="TradeHub.MDE" Guid="CA4BE2CB-F283-44AB-B36D-78F1269358FC">
+                <File Id="filD450062D00B79473D649C9FDA6A4B54F" KeyPath="yes" Source="$(var.MyDir)\TradeSharp.MarketDataProvider.Forexware.dll" />
+            </Component>
+            <Component Id="cmpC48723DB439E2CDFB4C588A40501C2D2" Directory="TradeHub.MDE" Guid="6539E481-36F4-43F3-8E34-99C56E7CCF18">
+                <File Id="filAAF8EB80B15888165B7ACEB7E5B5C86F" KeyPath="yes" Source="$(var.MyDir)\TradeSharp.MarketDataProvider.Forexware.pdb" />
+            </Component>
+            <Component Id="cmp2762B64AF9E5CD7D99C212E0205AF82E" Directory="TradeHub.MDE" Guid="AE6478A7-A392-4301-9F94-25A7A96B45D6">
+                <File Id="filBD685A71398B2BE34907217342B33FC8" KeyPath="yes" Source="$(var.MyDir)\Types.dll" />
+            </Component>
+            <Component Id="cmp7CF15524B9927C3257A2B47B48F650ED" Directory="TradeHub.MDE" Guid="0F695C0C-D870-4130-8B8E-1F45DC262208">
+                <File Id="filE761780D34DA8EAF4DC84D6EFB1BBDF6" KeyPath="yes" Source="$(var.MyDir)\zlib.net.dll" />
+            </Component>
+            <Component Id="cmp1EBA50F26DB62551DAD479F7C8CBA730" Directory="TradeHub.MDE" Guid="6CC0CEAD-C06B-4AD7-A830-A3DB30B886E2">
+                <File Id="fil56C54549A36D4BA72E142ED2036293AC" KeyPath="yes" Source="$(var.MyDir)\zlib32.dll" />
+            </Component>
+            <Component Id="cmpD4AE4B79C985CBBFD94B1FB82CD27392" Directory="TradeHub.MDE" Guid="D2F11A8D-DFB6-491B-9DB3-B29FF111E6AA">
+                <File Id="fil09A89CDB29FB88C3F1F00080C2FD7CDF" KeyPath="yes" Source="$(var.MyDir)\zlib64.dll" />
+            </Component>
+            <Component Id="cmp97DC4B5021AF6906EFD7937A7E381F3B" Directory="TradeHub.MDE" Guid="B362941F-0F5E-40BB-B70B-88D56602C041">
+                <File Id="filC76E325F864A92F16850D44218BF6899" KeyPath="yes" Source="$(var.MyDir)\zlibnet.dll" />
+            </Component>
+            <Component Id="cmp7C672A7DC36A81E6E28E3CFE377857F6" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="F7FA3D50-3344-4A45-BE64-C0F29DFCD402">
+                <File Id="fil2F7EAB4B7D3CF284DB8E21386C4A1A16" KeyPath="yes" Source="$(var.MyDir)\Config\AvailableProviders.xml" />
+            </Component>
+            <Component Id="cmp0759DA91763CF223FE42AC5DBBD6887D" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="1F6835B7-1A02-45B4-800A-947A0D67F059">
+                <File Id="fil02E8BB9B2444561BE5CAC52F0FE9A1D9" KeyPath="yes" Source="$(var.MyDir)\Config\BlackwoodConfigLive.xml" />
+            </Component>
+            <Component Id="cmp0BDD2C3E0C6A9D5276AF7259B84B362D" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="60C1B6AA-B6EE-4CF9-8FD8-FEAFF7F2C7C9">
+                <File Id="filF284BE7726CFDE1E47C336BF74AF091F" KeyPath="yes" Source="$(var.MyDir)\Config\BlackwoodParams.xml" />
+            </Component>
+            <Component Id="cmp6F3CFEF1BF1825021C5F1737EC3954EC" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="A82BFC95-22A9-4DD3-8B04-D0D6FD10805C">
+                <File Id="filFE36CF0CB798176A11C7C9F9978BB598" KeyPath="yes" Source="$(var.MyDir)\Config\Configuration.xml" />
+            </Component>
+            <Component Id="cmp7B8AA74AC296991BBEDB2113E4795E70" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="EB73FD54-B7C6-40FD-9A6D-68374A5C8D29">
+                <File Id="fil650B7C33304C7EBDAAAFE02E28F97767" KeyPath="yes" Source="$(var.MyDir)\Config\ForexwareFIXSettings.txt" />
+            </Component>
+            <Component Id="cmpB43DFEB385829DDD189515ED7B9FC15B" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="D84AC2C4-B534-4420-83E4-D7E0EBE42665">
+                <File Id="fil4A116B8D41DDE9F0DD869DFC2642F9B7" KeyPath="yes" Source="$(var.MyDir)\Config\ForexwareSpringConfig.xml" />
+            </Component>
+            <Component Id="cmpBB789716B2A8D72DA60402E562A4B015" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="99D80537-368E-4525-ACD5-0ADBB157D18F">
+                <File Id="fil4881E0424BD911379689CCB8100234E1" KeyPath="yes" Source="$(var.MyDir)\Config\MarketDataProviderGateway.xml" />
+            </Component>
+            <Component Id="cmp702F07DD2C45DDA3D5007D3E3F83201F" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="357188BD-38C2-49DF-BF80-78ADB237622E">
+                <File Id="fil5A763F3DBB53FF052D20176E56B01985" KeyPath="yes" Source="$(var.MyDir)\Config\RabbitMQ.xml" />
+            </Component>
+            <Component Id="cmp9257EA49E9447591F7CD3CCAC8B50FD9" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="6FFF9885-C85B-44E3-90D3-614A385196AA">
+                <File Id="filA88F254821284A1511354D43165A23A4" KeyPath="yes" Source="$(var.MyDir)\Config\Server.xml" />
+            </Component>
+            <Component Id="cmpC649CBCAF2F5443D0F2EED97E3C2B496" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="C684E7B5-9F42-4AF1-97A3-576B3B242684">
+                <File Id="fil8D3116E9274CA711CE00C5A6910A2085" KeyPath="yes" Source="$(var.MyDir)\Config\SimulatorConfig.xml" />
+            </Component>
+            <Component Id="cmpD3A7B4B2BA2E4EC2240107E530CA1C18" Directory="dir899679299B1C3B2F9E79DDEBB8569DD9" Guid="14886C3D-C15A-45E4-9402-859A99E5F0C2">
+                <File Id="fil592DEBF4CDE78CF21EA08A80F58A17A0" KeyPath="yes" Source="$(var.MyDir)\Config\ZmqConfig.xml" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

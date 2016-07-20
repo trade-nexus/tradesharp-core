@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PositionMQParameters>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>position_exchange</Exchange>
+  <PositionMessageQueue>position_client_message_queue</PositionMessageQueue>
+  <PositionMessageRoutingKey>position.client.message</PositionMessageRoutingKey>
+  <InquiryResponseQueue>queue</InquiryResponseQueue>
+  <InquiryResponseRoutingKey>routingkey</InquiryResponseRoutingKey>
+ </PositionMQParameters>

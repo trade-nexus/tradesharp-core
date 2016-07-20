@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84E21982-62E5-4CC8-857E-195D59A28B7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeHub.StrategyEngine.TradeHub.Tests</RootNamespace>
+    <AssemblyName>TradeHub.StrategyEngine.TradeHub.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Atomic">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Atomic.dll</HintPath>
+    </Reference>
+    <Reference Include="clrzmq, Version=2.2.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\clrzmq-x64.2.2.5\lib\clrzmq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="clrzmq-ext, Version=2.2.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\clrzmq-x64.2.2.5\lib\clrzmq-ext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Disruptor">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Disruptor.Scheduler">
+      <HintPath>..\..\packages\Disruptor-DamageBoy-IH.2.8.0.1\lib\net40\Disruptor.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyNetQ">
+      <HintPath>..\..\packages\EasyNetQ.0.15.3.143\lib\net40\EasyNetQ.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\..\packages\RabbitMQ.Client.3.1.5\lib\net30\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\packages\Spring.Aop.1.3.2\lib\net40\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\packages\Spring.Core.1.3.2\lib\net40\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\packages\Spring.Data.1.3.2\lib\net40\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="TradeHub.StrategyEngine.MultiBrokerStrategy">
+      <HintPath>..\TradeHub.StrategyEngine.MultiBrokerStrategy\bin\Debug\TradeHub.StrategyEngine.MultiBrokerStrategy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integration\MultiBrokerStrategyTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Integration\TradeHubSampleStrategyTests.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libzmq.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="LoggerConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Core\TradeHub.Common.Core.csproj">
+      <Project>{24541682-52D0-4E08-AB4F-047CA76E6E26}</Project>
+      <Name>TradeHub.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\TradeHub.Common.Persistence\TradeHub.Common.Persistence.csproj">
+      <Project>{38448709-33fe-4d4f-9864-8e2ebe8d952a}</Project>
+      <Name>TradeHub.Common.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\TradeHub.Infrastructure.Nhibernate\TradeHub.Infrastructure.Nhibernate.csproj">
+      <Project>{faf05ff7-f360-4d82-bb75-51d474322879}</Project>
+      <Name>TradeHub.Infrastructure.Nhibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MarketDataEngine\TradeHub.MarketDataEngine.Client\TradeHub.MarketDataEngine.Client.csproj">
+      <Project>{1cddebfb-717e-4cc1-b4e0-49be216152fc}</Project>
+      <Name>TradeHub.MarketDataEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NotificationEngine\TradeHub.NotificationEngine.Client\TradeHub.NotificationEngine.Client.csproj">
+      <Project>{bc25e828-c25c-4cf9-ad25-36b8fc80925c}</Project>
+      <Name>TradeHub.NotificationEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NotificationEngine\TradeHub.NotificationEngine.Common\TradeHub.NotificationEngine.Common.csproj">
+      <Project>{c911e748-989b-46f5-9918-b6b2da83da5a}</Project>
+      <Name>TradeHub.NotificationEngine.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OrderExecutionEngine\TradeHub.OrderExecutionEngine.Client\TradeHub.OrderExecutionEngine.Client.csproj">
+      <Project>{548683cc-fb53-4611-a65e-afdd5f5ff7dd}</Project>
+      <Name>TradeHub.OrderExecutionEngine.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.HistoricalData\TradeHub.StrategyEngine.HistoricalData.csproj">
+      <Project>{30db28b2-bd47-4760-af22-9f755defec4c}</Project>
+      <Name>TradeHub.StrategyEngine.HistoricalData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.MarketData\TradeHub.StrategyEngine.MarketData.csproj">
+      <Project>{10B68988-4BD1-4528-B9C5-8FD5512C8A3D}</Project>
+      <Name>TradeHub.StrategyEngine.MarketData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.Notification\TradeHub.StrategyEngine.Notification.csproj">
+      <Project>{7c7e0356-9aca-4d5a-86d3-624eb4703f9e}</Project>
+      <Name>TradeHub.StrategyEngine.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.OrderExecution\TradeHub.StrategyEngine.OrderExecution.csproj">
+      <Project>{73fd95b3-1a79-432c-a17b-cad18056c3f0}</Project>
+      <Name>TradeHub.StrategyEngine.OrderExecution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.Testing.SimpleStrategy\TradeHub.StrategyEngine.Testing.SimpleStrategy.csproj">
+      <Project>{a897169d-fd6f-4482-b866-fe3c0626e531}</Project>
+      <Name>TradeHub.StrategyEngine.Testing.SimpleStrategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeHub.StrategyEngine.TradeHub\TradeHub.StrategyEngine.TradeHub.csproj">
+      <Project>{36BFBDBD-FFF6-47A4-97BE-67E5C736105E}</Project>
+      <Name>TradeHub.StrategyEngine.TradeHub</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

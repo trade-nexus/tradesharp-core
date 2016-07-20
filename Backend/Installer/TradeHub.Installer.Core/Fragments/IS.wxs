@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.IS" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.IS">
+            <Component Id="cmpABC3D7630EC8562F343FC4C731015E0A" Directory="TradeHub.IS" Guid="CEEE1EA3-A32F-475E-BFF8-0DE625131575">
+                <File Id="fil9063EC2DF822BB0A666B9E538A91C835" KeyPath="yes" Source="$(var.ISDir)\FluentMigrator.dll" />
+            </Component>
+            <Component Id="cmp97C06A32C282E7F1081CEEF99B8BB4C1" Directory="TradeHub.IS" Guid="BDF5E148-C65C-4E34-BF31-3C3C98EC9EDB">
+                <File Id="fil4A7BDBC97A51DC604014B631CA247BA1" KeyPath="yes" Source="$(var.ISDir)\FluentMigrator.Runner.dll" />
+            </Component>
+            <Component Id="cmpA950033253C6895773F6127AA157ABB5" Directory="TradeHub.IS" Guid="C001FC3D-1555-4524-9342-9580E05AA128">
+                <File Id="fil3A5701A0D5B1B1173B5DEEFA987BDCCD" KeyPath="yes" Source="$(var.ISDir)\FluentMigrator.xml" />
+            </Component>
+            <Component Id="cmp877EA59F198D50BD29F77B66AF6133F4" Directory="TradeHub.IS" Guid="E7823B6F-D2EC-47B5-8816-19ED8E7D1B19">
+                <File Id="fil7266B3CEEF4FF79E03C3C0ED6A0EE13C" KeyPath="yes" Source="$(var.ISDir)\MySql.Data.dll" />
+            </Component>
+            <Component Id="cmpEB0204432A4BA3C00CB0194215D1106A" Directory="TradeHub.IS" Guid="F2C4EEBA-8943-4AEB-AEBD-E5394C09384E">
+                <File Id="fil0AF03864A571FB8CFCA18B44F104A553" KeyPath="yes" Source="$(var.ISDir)\TradeHub.Installer.Configuration.exe" />
+            </Component>
+            <Component Id="cmp306B3FDFAE9B5558AA06AC01E9D7B61D" Directory="TradeHub.IS" Guid="9244752F-8D3F-43C0-A84C-2C81EC4112F3">
+                <File Id="fil3D157604AF260AD2AA5BE8201A0EA509" KeyPath="yes" Source="$(var.ISDir)\TradeHub.Installer.Configuration.exe.config" />
+            </Component>
+            <Component Id="cmpD31C75A0E7607EF73FC4AD667D20A8A0" Directory="TradeHub.IS" Guid="95EED415-2364-4D87-887B-EDD1452DCA01">
+                <File Id="fil0B1262F0F9E31056479CE18F58260964" KeyPath="yes" Source="$(var.ISDir)\TradeHub.Installer.Configuration.pdb" />
+            </Component>
+            <Component Id="cmp1F9E7A3BE77AA838092CA8B7924BBFE6" Directory="TradeHub.IS" Guid="00B26C31-276E-459A-BB42-251391CE5FDB">
+                <File Id="filE1B9DCA5E6B606C93E9F368365336CF2" KeyPath="yes" Source="$(var.ISDir)\TradeHub.Installer.DbMigration.dll" />
+            </Component>
+            <Component Id="cmp6CABC8AD902AAD848BFC3410634A5665" Directory="TradeHub.IS" Guid="047A0DA5-5E42-40E3-9AB2-1251F1FAC2B8">
+                <File Id="fil106E0006F2CB50A80D934D60CDAFFA8F" KeyPath="yes" Source="$(var.ISDir)\TradeHub.Installer.DbMigration.pdb" />
+            </Component>
+            <Component Id="cmp6E4D273E2DF88ECAF8A099F795CF6E3A" Directory="TradeHub.IS" Guid="A4B993B0-6BAF-405F-9BDF-94466C65E86C">
+                <File Id="fil2AEACC82F5E6C82DD8D7D5DE0B5C755D" KeyPath="yes" Source="$(var.ISDir)\TradeHubDBScript.sql" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

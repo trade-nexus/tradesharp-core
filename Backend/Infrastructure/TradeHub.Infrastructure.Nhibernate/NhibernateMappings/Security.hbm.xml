@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+assembly="TradeHub.Common.Core" namespace="TradeHub.Common.Core.DomainModels">
+  <class name="Security" table="Security" lazy="false">
+    <id name="Isin" column="Isin">
+      <!--<generator class="native" />-->
+    </id>
+    <property name="Symbol" column="Symbol"/>
+    <property name="SecurityType" column="SecurityType" access="readonly"/>
+   
+  </class>
+</hibernate-mapping>

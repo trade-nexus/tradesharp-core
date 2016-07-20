@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>FluentMigrator.Runner</id>
+    <version>1.5.0.0</version>
+    <authors>Josh Coffman,  Tom Marien</authors>
+    <owners>Josh Coffman,  Tom Marien</owners>
+    <licenseUrl>https://github.com/schambers/fluentmigrator/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/schambers/fluentmigrator/wiki/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FluentMigrator is a database migration framework for .NET written in C#. The basic idea is that you can create migrations which are simply classes that derive from the Migration base class and have a Migration attribute with a unique version number attached to them. Upon executing FluentMigrator, you tell it which version to migrate to and it will run all necessary migrations in order to bring your database up to that version.
+      In addition to forward migration support, FluentMigrator also supports different ways to execute the migrations along with selective migrations called profiles and executing arbitrary SQL.</description>
+    <summary>FluentMigrator is a database migration framework for .NET written in C#.</summary>
+    <releaseNotes>https://github.com/schambers/fluentmigrator/releases
+
+
+
+Features:
+
+    #467 - Allow many assemblies to contribute IMigrations in the same migrations run (JulianRooze)
+    #529 - Support SAP HANA Database (FabioNascimento)
+    #570 - Add options to generate migrations without database connection (andrewhanson)
+    #577 - Added ability to set Transaction Behavior and use Tags with MaintenanceAttribute (unrealguard)
+
+Improvements:
+
+    #553 - Postgresql now handles comments (itn3000)
+    #573 - Provides an ability to create a column and specify that the timezone information should be stored with the date (dealproc)
+
+Fixes:
+
+    #572 - SetExistingRowsTo: will not longer change column length (mstancombe)
+    #585 - Jet: Added Transaction to expression.Operation (albatrossen)
+    #576 - Firebird: quote only keywords otherwise quoting should be optional and not the default &amp; various (amroel)
+    #568 - Oracle: Fix Escaping of Guid's, for insertdataexpression etc (tommarien)
+
+Various:
+
+    #565 Albacore upgrade to 2.0 (daniellee)</releaseNotes>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="FluentMigrator" version="1.5.0.0" />
+    </dependencies>
+  </metadata>
+</package>

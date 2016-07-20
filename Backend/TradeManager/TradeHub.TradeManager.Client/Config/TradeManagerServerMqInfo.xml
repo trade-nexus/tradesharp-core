@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RabbitMQ>
+  <ConnectionString>localhost</ConnectionString>
+  <Exchange>trademanager_exchange</Exchange>
+
+  <ExecutionMessageRoutingKey>trademanager.execution.message</ExecutionMessageRoutingKey>
+  
+</RabbitMQ>

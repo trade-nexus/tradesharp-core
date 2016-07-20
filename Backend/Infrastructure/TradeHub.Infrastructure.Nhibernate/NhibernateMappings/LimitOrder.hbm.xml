@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+assembly="TradeHub.Common.Core" namespace="TradeHub.Common.Core.DomainModels.OrderDomain">
+<class name="LimitOrder" table="LimitOrders" lazy="false">
+<id name="OrderID" column="OrderId">
+<!--<generator class="native" />-->
+</id>
+<property name="BrokerOrderID"  column="BrokerOrderID"/>
+<!--<property name="Security" column="Security"/>-->
+<property name="OrderSide"  column="OrderSide"/>
+<property name="OrderDateTime" column="OrderDateTime"/>
+<property name="OrderSize"  column="OrderSize"/>
+<property name="OrderCurrency"  column="OrderCurrency"/>
+<property name="OrderTif"  column="OrderTif"/>
+<property name="OrderExecutionProvider"  column="OrderExecutionProvider"/>
+<property name="OrderStatus"  column="OrderStatus"/>
+<property name="Exchange"  column="Exchange"/>
+<property name="TriggerPrice" column="TriggerPrice"/>
+<property name="Slippage"  column="Slippage"/>
+<property name="Remarks" column="Remarks"/>
+<property name="LimitPrice" column="LimitPrice"/>
+<many-to-one name="Security" column="Security" class="TradeHub.Common.Core.DomainModels.Security" cascade ="save-update" />
+</class>
+</hibernate-mapping>

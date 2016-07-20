@@ -1,0 +1,39 @@
+﻿# Default settings for sessions
+[DEFAULT]
+# Defines if session will act as an acceptor or an initiator
+ConnectionType=initiator
+# Logging: Directory to store logs.
+FileLogPath=logs
+# File Storage: Directory to store sequence number and message files.
+FileStorePath=msgs
+
+UseDataDictionary=Y
+DataDictionary=FIX43.xml
+
+# ValidateFieldsHaveValues=N
+# ValidateFieldsOutOfOrder=N
+# ReconnectInterval=0
+# ResetOnDisconnect=Y
+# ResetSeqNumFlag=Y
+# ResetOnLogout=Y
+# SendResetSeqNumFlag=Y
+# ContinueInitializationOnError=Y
+
+# Session definition Trade/Order
+DeliverToCompID=BRKX
+[SESSION]
+SessionName=Order
+BeginString=FIX.4.3
+TargetCompID=demo.fxgrid
+SenderCompID=order.1020FCFX.88
+SenderSubID=1020FCFX
+Username=trader88
+Password=Welcome02
+StartDay=Monday
+EndDay=Friday
+StartTime=00:00:00
+EndTime=23:59:59
+MillisecondsInTimeStamp=Y
+HeartBtInt=60
+SocketConnectPort=2506
+SocketConnectHost=127.0.0.1

@@ -1,0 +1,68 @@
+﻿<Window x:Class="TradeHub.DataDownloader.UserInterface.Shell.Shell.ConfirmationMessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Confirmation Message" Background="White"
+        Height="160" Width="320"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    
+    <Border BorderBrush="Black" BorderThickness="2">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="0" Color="Black" Opacity="1" BlurRadius="1" />
+        </Border.Effect>
+        <Grid>
+            <Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="0.90*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush= "White"  BorderThickness="1"
+                            Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}">
+                    <Canvas Grid.Row="0" Height="25" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Black" 
+                                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}, Path=ActualWidth}" 
+                                PreviewMouseDown="CanvasMouseDown" PreviewMouseMove="CanvasMouseMove" PreviewMouseUp="CanvasMouseUp">
+                        <Grid Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualHeight}"
+                                        Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualWidth}">
+                            <Label Content="CONFIRMATION" 
+                                    Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualHeight}"
+                                    Foreground="White"
+                                    Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            </Label>
+                        </Grid>
+                    </Canvas>
+                </Border>
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" Name="MessageBoxLabel"
+               Foreground="Black"
+               Height="30" FontSize="14"
+               Margin="0,-40,0,0"
+               HorizontalAlignment="Center">
+
+            </Label>
+
+            <Button Grid.Row="1" Grid.Column="0" Height="35" Width="125"
+                Margin="10,40,0,0" HorizontalAlignment="Left"
+                Content="YES" 
+                Click="YesClicked"
+                Foreground="White"
+                Background="Red">
+
+            </Button>
+            <Button Grid.Row="1" Grid.Column="0" Height="35" Width="125"
+                Margin="0,40,10,0" HorizontalAlignment="Right"
+                Content="NO" 
+                Click="NoClicked"
+                Foreground="White"
+                Background="Green">
+
+            </Button>
+        </Grid>
+    </Border>
+</Window>

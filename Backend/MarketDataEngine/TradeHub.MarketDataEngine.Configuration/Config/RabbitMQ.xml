@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RabbitMQ>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>marketdata_exchange</Exchange>
+  <SubscribeQueue>marketdata_engine_subscribe_queue</SubscribeQueue>
+  <SubscribeRoutingKey>marketdata.engine.subscribe</SubscribeRoutingKey>
+  <UnsubscribeQueue>marketdata_engine_unsubscribe_queue</UnsubscribeQueue>
+  <UnsubscribeRoutingKey>marketdata.engine.unsubscribe</UnsubscribeRoutingKey>
+  <LiveBarSubscribeQueue>marketdata_engine_livebar_subscribe_queue</LiveBarSubscribeQueue>
+  <LiveBarSubscribeRoutingKey>marketdata.engine.livebar.subscribe</LiveBarSubscribeRoutingKey>
+  <LiveBarUnsubscribeQueue>marketdata_engine_livebar_unsubscribe_queue</LiveBarUnsubscribeQueue>
+  <LiveBarUnsubscribeRoutingKey>marketdata.engine.livebar.unsubscribe</LiveBarUnsubscribeRoutingKey>
+  <HistoricBarDataQueue>marketdata_engine_historicbar_queue</HistoricBarDataQueue>
+  <HistoricBarDataRoutingKey>marketdata.engine.historicbar</HistoricBarDataRoutingKey>
+  <LoginQueue>marketdata_engine_login_queue</LoginQueue>
+  <LoginRoutingKey>marketdata.engine.login</LoginRoutingKey>
+  <LogoutQueue>marketdata_engine_logout_queue</LogoutQueue>
+  <LogoutRoutingKey>marketdata.engine.logout</LogoutRoutingKey>
+  <InquiryQueue>marketdata_engine_inquiry_queue</InquiryQueue>
+  <InquiryRoutingKey>marketdata.engine.inquiry</InquiryRoutingKey>
+  <AppInfoQueue>marketdata_engine_appinfo_queue</AppInfoQueue>
+  <AppInfoRoutingKey>marketdata.engine.appinfo</AppInfoRoutingKey>
+  <HeartbeatQueue>marketdata_engine_heartbeat_queue</HeartbeatQueue>
+  <HeartbeatRoutingKey>marketdata.engine.heartbeat</HeartbeatRoutingKey>
+</RabbitMQ>

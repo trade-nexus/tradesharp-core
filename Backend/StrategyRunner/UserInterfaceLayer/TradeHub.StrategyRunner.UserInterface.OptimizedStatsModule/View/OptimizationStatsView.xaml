@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="TradeHub.StrategyRunner.UserInterface.OptimizedStatsModule.View.OptimizationStatsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto" >
+            <ListView Width="auto"
+                BorderThickness="1" 
+                AlternationCount="2"
+                IsSynchronizedWithCurrentItem="True" 
+                Margin="0,0,0,0"                 
+                ItemsSource="{Binding StatisticsCollection}">
+                <ListView.View>
+                    <GridView 
+                        AllowsColumnReorder="true">
+                        <GridViewColumn 
+                            Header="Parameters Info" 
+                            Width="150"
+                            DisplayMemberBinding="{Binding ParametersInfo}"/>
+                        <GridViewColumn 
+                            Header="Bought" 
+                            Width="70"
+                            DisplayMemberBinding="{Binding Statistics.SharesBought}"/>
+                        <GridViewColumn 
+                            Header="Sold" 
+                            Width="70"
+                            DisplayMemberBinding="{Binding Statistics.SharesSold}"/>
+                        <GridViewColumn 
+                            Header="Avg. Buy Price" 
+                            Width="90" 
+                            DisplayMemberBinding="{Binding Statistics.AvgBuyPrice}"/>
+                        <GridViewColumn 
+                            Header="Avg. Sell Price" 
+                            Width="90" 
+                            DisplayMemberBinding="{Binding Statistics.AvgSellPrice}"/>
+                        <GridViewColumn 
+                            Header="Profit" 
+                            Width="80" 
+                            DisplayMemberBinding="{Binding Statistics.Pnl}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

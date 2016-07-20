@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tradier>
+  <Account>30950670</Account>
+  <BaseUrl>https://api.tradier.com</BaseUrl>
+  <Token>MGOQrxkAvG1k8Ue84U13c1AGqZ6t</Token>
+  <TimerInterval>10000</TimerInterval>
+</Tradier>

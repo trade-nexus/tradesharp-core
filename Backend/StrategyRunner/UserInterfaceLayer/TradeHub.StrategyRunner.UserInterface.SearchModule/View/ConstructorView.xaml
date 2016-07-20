@@ -1,0 +1,42 @@
+﻿<Window x:Class="TradeHub.StrategyRunner.UserInterface.SearchModule.View.ConstructorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Strategy Info" Height="300" Width="600">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="SEARCH" Grid.Row="0"
+                    Height="20" Width="80"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Center" 
+                    Margin="0,0,10,0"
+                    Command="{Binding BrowseStrategyParametersCommand}"/>
+
+        <DataGrid Name="ConstructorDataGrid" Grid.Row="1" 
+                  ItemsSource="{Binding}" IsReadOnly="False"
+                  AutoGenerateColumns="True">
+        </DataGrid>
+
+        <Button Content="GENETIC OPTIMIZATION" Grid.Row="2"
+                    Height="20" Width="140"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Center" 
+                    Margin="0,0,250,0" Click="OnGeneticOptimzeButtonClick"/>
+
+        <Button Content="BRUTE OPTIMIZATION" Grid.Row="2"
+                    Height="20" Width="140"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Center" 
+                    Margin="0,0,100,0" Click="OnOptimizeButtonClick"/>
+        
+        <Button Content="RUN" Grid.Row="2"
+                    Height="20" Width="80"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Center" 
+                    Margin="0,0,10,0" Click="OnRunButtonClick"/>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿# Default settings for sessions
+[DEFAULT]
+# Defines if session will act as an acceptor or an initiator
+ConnectionType=initiator
+# Logging: Directory to store logs.
+FileLogPath=c:\fix\logs\client-fix-messages
+# File Storage: Directory to store sequence number and message files.
+FileStorePath=c:\fix\logs\client-fix-messages
+
+UseDataDictionary=Y
+DataDictionary=FIX44.xml
+
+# ValidateFieldsHaveValues=N
+# ValidateFieldsOutOfOrder=N
+# ReconnectInterval=0
+# ResetOnDisconnect=Y
+# ResetSeqNumFlag=Y
+# ResetOnLogout=Y
+# SendResetSeqNumFlag=Y
+# ContinueInitializationOnError=Y
+
+# Session definition Stream/Price
+DeliverToCompID=BRKK
+[SESSION]
+SessionName=Price
+BeginString=FIX.4.4
+TargetCompID=XW-ORD
+SenderCompID=CAP-UAT
+SenderSubID=1020FCFX
+Account=Capuano_FIXTEST
+StartDay=Monday
+EndDay=Friday
+StartTime=17:00:01
+EndTime=16:59:59
+MillisecondsInTimeStamp=Y
+HeartBtInt=30
+SocketConnectPort=8882
+SocketConnectHost=127.0.0.1

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TradeHub.TM">
+            <Directory Id="dir8244BE29B9D81ACD71F9277EE24938CE" Name="Config" />
+            <Directory Id="dirAE4FBF514D83B74BFF7937BC497FBBFA" Name="NhibernateMappings" />
+            <Directory Id="dir50F03319E45C5917A4CFAA0E90D4D64A" Name="Spring" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TradeHub.TM">
+            <Component Id="cmp0DD1FC60579307A62A8DBE779EDAE048" Directory="TradeHub.TM" Guid="DCF72B06-E93E-41B9-BF0F-B9EE85F1805A">
+                <File Id="fil6121F8B76312F5DC02A7A965B0CF5EF6" KeyPath="yes" Source="$(var.TMDir)\Atomic.dll" />
+            </Component>
+            <Component Id="cmp3BDCA02FAC8186964C9CE4986952C583" Directory="TradeHub.TM" Guid="536888EA-51AD-4E74-B02E-45BA0E154179">
+                <File Id="fil662788AD61D2F6337C74FF2BD767AD51" KeyPath="yes" Source="$(var.TMDir)\Atomic.xml" />
+            </Component>
+            <Component Id="cmpFBD839DA50EEEDFB02CF60755F315927" Directory="TradeHub.TM" Guid="107E4500-5C11-4A27-B01F-39982C752A8F">
+                <File Id="fil7155691AA8760287A9366E675A6053BB" KeyPath="yes" Source="$(var.TMDir)\Common.Logging.dll" />
+            </Component>
+            <Component Id="cmp3AFA396074246B9DD71B13FAD564EB79" Directory="TradeHub.TM" Guid="AFCFA0C8-08A9-4142-8781-989152E47EAA">
+                <File Id="fil9DFAF7FE9AB9B0AF8F97EAE8DE4EBA8D" KeyPath="yes" Source="$(var.TMDir)\Disruptor.dll" />
+            </Component>
+            <Component Id="cmpA18551452A61E983E2B2338F0A7FFE64" Directory="TradeHub.TM" Guid="0ABB9694-1DC7-4A17-96FA-FF76ECF4030B">
+                <File Id="fil24400292425B0C3D5B0334E7155A7C0E" KeyPath="yes" Source="$(var.TMDir)\Disruptor.xml" />
+            </Component>
+            <Component Id="cmpED621BF10625EB1B433125BC86B39DE0" Directory="TradeHub.TM" Guid="A3558154-EAA2-4B01-81C2-C54A4F780EF1">
+                <File Id="fil7A60F993B3E5EDCD6778064C8869E7FE" KeyPath="yes" Source="$(var.TMDir)\EasyNetQ.dll" />
+            </Component>
+            <Component Id="cmp29A9512E8E4A05100768B173D3BF7C35" Directory="TradeHub.TM" Guid="4279269C-B3E1-4A8A-9E35-5A30670C8094">
+                <File Id="fil7E85DF68776280A1468A5CB913655358" KeyPath="yes" Source="$(var.TMDir)\Iesi.Collections.dll" />
+            </Component>
+            <Component Id="cmp3EBA4F1650F8E9453FA0B9B5B447849C" Directory="TradeHub.TM" Guid="A5F81A32-5074-45EE-A2E2-708203AD9BC2">
+                <File Id="filA78918DEAB65AF8C4344619AB920394A" KeyPath="yes" Source="$(var.TMDir)\Iesi.Collections.xml" />
+            </Component>
+            <Component Id="cmp4AAC92E945FE544F4D8CB1F8CBAFFEF7" Directory="TradeHub.TM" Guid="553043AF-3467-4883-A1B8-9E6E8892368D">
+                <File Id="filEFB5886085427FB714C75BCE03F14E3B" KeyPath="yes" Source="$(var.TMDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmpE6AC6525239722ECBC5C4CB2A0D37BCE" Directory="TradeHub.TM" Guid="39A9CBA7-4788-40E1-84C1-BE3D4E235845">
+                <File Id="filE4566FB4D7262265904D09CE6275392F" KeyPath="yes" Source="$(var.TMDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmpA6293F13F40E899A8DE1F8F0DF3FC7F2" Directory="TradeHub.TM" Guid="2B2A1FF6-DD5D-468B-80E6-7DEC6B37D882">
+                <File Id="filEDDC910325A1EF1CA3D752F250F3E774" KeyPath="yes" Source="$(var.TMDir)\NHibernate.dll" />
+            </Component>
+            <Component Id="cmp9A054FE7C2982028F86AA0A550D686F2" Directory="TradeHub.TM" Guid="71B066BA-0F8C-42F6-8BE9-D4E94F0CF083">
+                <File Id="fil13CBBE385F4CF1DFD15642C3BA60422C" KeyPath="yes" Source="$(var.TMDir)\NHibernate.xml" />
+            </Component>
+            <Component Id="cmp7062CC663F74BF6FA343485A3BEA2D33" Directory="TradeHub.TM" Guid="26E69130-61B0-4A4D-93D4-F13220EB95D7">
+                <File Id="fil35BB82CD1302AB043C5DB50B589EEB37" KeyPath="yes" Source="$(var.TMDir)\RabbitMQ.Client.dll" />
+            </Component>
+            <Component Id="cmpC4274AD982896E5D0D0D89EE3DEDF95F" Directory="TradeHub.TM" Guid="272E9242-06C1-42CE-80CE-E158DFD30E46">
+                <File Id="filE687D21D135FF6328697DACF07E9B863" KeyPath="yes" Source="$(var.TMDir)\RabbitMQ.Client.xml" />
+            </Component>
+            <Component Id="cmpEA5C860FB80ED40B291A7CA0E08C82C4" Directory="TradeHub.TM" Guid="7C09E2A5-2BC4-4A4D-93F8-F60DEEB77770">
+                <File Id="fil972E930652EABB20D559ED1DAD822CE6" KeyPath="yes" Source="$(var.TMDir)\Spring.Aop.dll" />
+            </Component>
+            <Component Id="cmp780B694B32577E9DDA46E0A2BBAB2448" Directory="TradeHub.TM" Guid="7DB4DC87-1CB5-49CA-BBBC-C3CE2DEF1F91">
+                <File Id="fil150DC345DC7324CA3F5DFFD7020A7191" KeyPath="yes" Source="$(var.TMDir)\Spring.Aop.xml" />
+            </Component>
+            <Component Id="cmpD2FCDA2EA2C7D10F1E4BB18FACD5828D" Directory="TradeHub.TM" Guid="481A588A-64EC-4B5D-AAF3-F4C9630244EC">
+                <File Id="fil1DDAD8A8DDD70E86DEE9E05D495C7479" KeyPath="yes" Source="$(var.TMDir)\Spring.Core.dll" />
+            </Component>
+            <Component Id="cmpC66631FB657C6251B98F7CE50CB65D68" Directory="TradeHub.TM" Guid="CCC96091-2030-4A52-9E16-6E17BC930EC4">
+                <File Id="fil1D0424118C40F464877D8396B5A16F9D" KeyPath="yes" Source="$(var.TMDir)\Spring.Core.xml" />
+            </Component>
+            <Component Id="cmpB39612F5447B8C711AA9608D8959B61C" Directory="TradeHub.TM" Guid="8D2038CA-68F7-4C6B-A534-B7C7A49ECEAA">
+                <File Id="fil1679AE1F6A1472AD6AE003F16C71B78A" KeyPath="yes" Source="$(var.TMDir)\Spring.Data.dll" />
+            </Component>
+            <Component Id="cmp9877EE714B2B9A42CC9029CB748156EA" Directory="TradeHub.TM" Guid="700650FC-A9B1-4981-B709-472D67C97172">
+                <File Id="fil90309CF9157C4CDC5262F5F67FF253D3" KeyPath="yes" Source="$(var.TMDir)\Spring.Data.NHibernate32.dll" />
+            </Component>
+            <Component Id="cmp0FEF19292EC1FD456FA74ACC520B951C" Directory="TradeHub.TM" Guid="775D0CFA-5459-4BAF-8793-20D81D9F7378">
+                <File Id="fil38BED06108557F1DB72EABF4B6AE3EED" KeyPath="yes" Source="$(var.TMDir)\Spring.Data.NHibernate32.xml" />
+            </Component>
+            <Component Id="cmpEF6E850AB38AEA763662368CBD65B0E4" Directory="TradeHub.TM" Guid="7066D0BA-271B-45CE-9953-D6ED8E8D568F">
+                <File Id="fil20A8ED791EC0746BACF9A141757E2FBB" KeyPath="yes" Source="$(var.TMDir)\Spring.Data.xml" />
+            </Component>
+            <Component Id="cmp67E48A9EF3E8A3430DB7D78F389BEC73" Directory="TradeHub.TM" Guid="824BACDD-DE27-4A83-AA46-A9939C12611D">
+                <File Id="fil01DEA0BF0FDC9B8B43DF77DFB0100D58" KeyPath="yes" Source="$(var.TMDir)\SpringDao.xml" />
+            </Component>
+            <Component Id="cmp759931ED74FCC92113AE4E5967C9F1B4" Directory="TradeHub.TM" Guid="7E2CAF7A-482D-41A1-A50B-358D6F34490E">
+                <File Id="filB6DD9D06ADFEA505335D06B9DBB20FA7" KeyPath="yes" Source="$(var.TMDir)\TraceSourceLogger.dll" />
+            </Component>
+            <Component Id="cmp8AEF5CB92FB3684F5082801E156A70DB" Directory="TradeHub.TM" Guid="30E417E3-09EF-4A4F-8622-634CC27C107C">
+                <File Id="filBAEA0EE2A626D0ED98BA582189493DD4" KeyPath="yes" Source="$(var.TMDir)\TradeHub.Common.Core.dll" />
+            </Component>
+            <Component Id="cmp893BBE7CA97212141C2B383EE77DC58C" Directory="TradeHub.TM" Guid="79B6B884-2171-4E29-86EB-5F0F24992968">
+                <File Id="filD4AC293F897D4D1129DF9134EC8EF41D" KeyPath="yes" Source="$(var.TMDir)\TradeHub.Common.Persistence.dll" />
+            </Component>
+            <Component Id="cmp8D13BEBCAF575BE8C3CAC022416D9419" Directory="TradeHub.TM" Guid="450F3C45-2556-4435-A294-505BE2F4D21D">
+                <File Id="filAED968D6AE37C71667B41FF9E41C4A6B" KeyPath="yes" Source="$(var.TMDir)\TradeHub.Infrastructure.Nhibernate.dll" />
+            </Component>
+            <Component Id="cmpDA7575DB4B7DB72D7D28C5B7FAFAFE01" Directory="TradeHub.TM" Guid="856F9735-40B8-44F7-B518-15849EFF4D40">
+                <File Id="fil71562A8B5888BE04452DBAEED13DF0AE" KeyPath="yes" Source="$(var.TMDir)\TradeHub.Infrastructure.Nhibernate.pdb" />
+            </Component>
+            <Component Id="cmpA4129861C6A8E71FB608BB10AF7C7B1B" Directory="TradeHub.TM" Guid="382C9F81-4E0C-4AF2-A0FE-215581E04A89">
+                <File Id="fil98E102FEF8696EC4D26A2F3FB213A079" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.CommunicationManager.dll" />
+            </Component>
+            <Component Id="cmpB8B9B2534AD352CB58A58041D36E694B" Directory="TradeHub.TM" Guid="BFF828E8-9389-4B5E-BAC2-B87C0869C1C6">
+                <File Id="fil86141F580B9DBA5EB8DE22541FE8D8D2" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.CommunicationManager.pdb" />
+            </Component>
+            <Component Id="cmpE8E966D3258A3CC09A6DC72F595EDBCB" Directory="TradeHub.TM" Guid="4B92EC3D-C98B-4D8E-969B-DD3C339DFB04">
+                <File Id="filBDDDEF2439F34D9E346E320A1656A6BB" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.Server.dll" />
+            </Component>
+            <Component Id="cmpB9DE8725CA5BFF4539500F542464E1FA" Directory="TradeHub.TM" Guid="3208349F-EAE9-4026-83CB-2A4C50227743">
+                <File Id="filD39E0B27622E0B498784910B61C1C66D" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.Server.pdb" />
+            </Component>
+            <Component Id="cmpE975DEB5EDD7056F7C0B7E86D2C5F41A" Directory="TradeHub.TM" Guid="EFDFDAD1-234C-48C4-84A8-532A86EA25FD">
+                <File Id="filAC0D3845364006208445B0C223851F5E" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.Server.WindowsService.exe" />
+            </Component>
+            <Component Id="cmp73BEEBE9044E80F77FD64931A4D5B40F" Directory="TradeHub.TM" Guid="4A5CB610-40AF-4BCA-A44C-FDEDEBF0ECF1">
+                <File Id="fil5E2EF67C10D98357226A49CEA153F7BB" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.Server.WindowsService.exe.config" />
+            </Component>
+            <Component Id="cmpC0DBB73BFF0DFA654324C68A9FC130A6" Directory="TradeHub.TM" Guid="81D261CF-4657-4FEB-9BBA-6C1928D99BEA">
+                <File Id="fil6F9905B318E8F3670B1C9E3DFC22A82D" KeyPath="yes" Source="$(var.TMDir)\TradeHub.TradeManager.Server.WindowsService.pdb" />
+            </Component>
+            <Component Id="cmp507431C55760EE480510292E7487CE57" Directory="dir8244BE29B9D81ACD71F9277EE24938CE" Guid="5767ABC3-B2DB-4981-828B-D0D74179058F">
+                <File Id="filA9898ACA545AB80F45E4E9F2F226B736" KeyPath="yes" Source="$(var.TMDir)\Config\TradeManagerMqConfig.xml" />
+            </Component>
+            <Component Id="cmpD834030D3C1637633AB666989F4017A5" Directory="dirAE4FBF514D83B74BFF7937BC497FBBFA" Guid="C933D15A-B89B-4017-BACF-E5C91D3E544E">
+                <File Id="fil49FBE5B057B6E121849FD189172F5820" KeyPath="yes" Source="$(var.TMDir)\NhibernateMappings\LimitOrder.hbm.xml" />
+            </Component>
+            <Component Id="cmpC7B2F84E928317C46823FC7FF52AE370" Directory="dirAE4FBF514D83B74BFF7937BC497FBBFA" Guid="7D28041B-BE1E-4416-8106-895583311A05">
+                <File Id="fil2D0105B75119E55D64464711E7E3CD30" KeyPath="yes" Source="$(var.TMDir)\NhibernateMappings\Security.hbm.xml" />
+            </Component>
+            <Component Id="cmp304B8E96D28ACB0CAE145C7A45E638B9" Directory="dir50F03319E45C5917A4CFAA0E90D4D64A" Guid="973FE9FE-7975-43A2-A63A-09990DE63607">
+                <File Id="filF295014040DA7DBB5BDD394613EFF3F1" KeyPath="yes" Source="$(var.TMDir)\Spring\TradeManagerServerSpringConfig.xml" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

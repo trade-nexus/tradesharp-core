@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  
+  <description>
+    The object definition for OEE MQ-Server
+  </description>
+
+  
+  
+  <object id="OrderExecutionMqServer" type="TradeHub.OrderExecutionEngine.Configuration.Service.OrderExecutionMqServer, TradeHub.OrderExecutionEngine.Configuration">
+    <constructor-arg index="0" value="OEEMQConfig.xml"/>
+    <constructor-arg index="1" value="10000"/>
+    <constructor-arg index="2" value="120000"/>
+  </object>
+
+</objects>

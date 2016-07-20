@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:nms="http://www.springframework.net/nms">
+
+  <description>
+    Spring Config file for Positiion Engine Service
+  </description>
+
+  <object id="PositionEngineClient" type="TradeHub.PositionEngine.Client.Service.PositionEngineClient, TradeHub.PositionEngine.Client" singleton="false">
+    <constructor-arg index="0" value="PEServer.xml"/>
+    <constructor-arg index="1" value="PEClientMqConfig.xml"/>
+  </object>
+
+  <object id="PositionEngineService" type="TradeHub.StrategyEngine.PositionService.PositionEngineService, TradeHub.StrategyEngine.PositionService" singleton="false">
+    <constructor-arg index="0" ref="PositionEngineClient"/>
+  </object>
+
+</objects>

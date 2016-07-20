@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:nms="http://www.springframework.net/nms">
+
+  <!-- Imports TradeHub.MarketDataEngine.Configuration configuration --><!--
+  <import resource="assembly://TradeHub.MarketDataEngine.Configuration/TradeHub.MarketDataEngine.Configuration.Config/Configuration.xml"/>
+
+  --><!-- Imports TradeHub.MarketDataEngine.MarketDataProviderGateway configuration --><!--
+  <import resource="assembly://TradeHub.MarketDataEngine.MarketDataProviderGateway/TradeHub.MarketDataEngine.MarketDataProviderGateway.Config/MarketDataProviderGateway.xml"/>-->
+
+
+  <object id="ApplicationController" type="TradeHub.MarketDataEngine.Server.Service.ApplicationController, TradeHub.MarketDataEngine.Server" singleton="false">
+    <constructor-arg index="0" ref="MqServer"/>
+    <constructor-arg index="1" ref="MessageProcessor"/>
+  </object>
+  
+</objects>
