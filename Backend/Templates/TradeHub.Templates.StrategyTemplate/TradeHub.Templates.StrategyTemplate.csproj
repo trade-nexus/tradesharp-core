@@ -39,15 +39,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="TraceSourceLogger, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\TraceSourceLogger.dll</HintPath>
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
     </Reference>
     <Reference Include="TradeHub.Common.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\TradeHub.Common.Core.dll</HintPath>
+      <HintPath>..\..\Common\TradeHub.Common.Core\bin\Debug\TradeHub.Common.Core.dll</HintPath>
     </Reference>
     <Reference Include="TradeHub.StrategyEngine.TradeHub, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\TradeHub.StrategyEngine.TradeHub.dll</HintPath>
+      <HintPath>..\..\StrategyEngine\TradeHub.StrategyEngine.TradeHub\bin\Debug\TradeHub.StrategyEngine.TradeHub.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
