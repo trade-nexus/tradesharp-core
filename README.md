@@ -94,3 +94,6 @@ To load data from workbench
     * Note: ProgramData folder may be hidden.
 1. Some log files are created in component Debug folders. For example after running MarketDataEngine Console, log file will be created in **<Path to tradesharp-core code cloned>\Backend\MarketDataEngine\TradeHub.MarketDataEngine.Server.Console\bin\Debug\**.
 
+### Bugs
+
+Please report bugs [here](https://github.com/trade-nexus/bugs)
