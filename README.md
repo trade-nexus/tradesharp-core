@@ -1,14 +1,26 @@
 ## TradeSharp ##
 
-A C# based data feed and broker neutral Algorithmic Trading Platform that lets trading firms or individuals automate any rules based trading strategies in stocks, forex and ETFs.
+TradeSharp is a C# based data feed and broker neutral Algorithmic Trading Platform that lets trading firms or individuals automate any rules based trading strategies in stocks, forex and ETFs.
 
 Find more about TradeSharp [here](https://www.tradesharp.se/).
 
 
 ***
 
+### Table of contents ###
 
-### Installations (Tools and Requirements) ###
+  * [Installation](#installation)
+  * [Code Cloning](#code-cloning)
+  * [Setting Up Database](#setting-up-database)
+  * [Running Application](#running-application)
+  * [Viewing Logs](#viewing-logs)
+  * [Reporting Bugs](#bugs)
+  
+  
+***  
+
+
+### Installation ###
 1. Microsoft Visual Studio 2012 or higher
 1. .NET Framework 4.5.1
 1. MySQL
@@ -27,9 +39,9 @@ Find more about TradeSharp [here](https://www.tradesharp.se/).
 
 ### Code Cloning ###
 1. Clone TradeSharp backend (tradesharp-core):
-    * git clone https://github.com/TradeNexus/tradesharp-core
+    * git clone https://github.com/trade-nexus/tradesharp-core
 1. Clone TradeSharp frontend (tradesharp-ui):
-    * git clone https://github.com/TradeNexus/tradesharp-ui
+    * git clone https://github.com/trade-nexus/tradesharp-ui
 
 
 ### Setting Up Database ###
