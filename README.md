@@ -21,6 +21,9 @@ Find more about TradeSharp [here](https://www.tradesharp.se/).
 
 
 ### Installation ###
+
+Download and install the following tools to setup development environment for working with TradeSharp.
+
 1. Microsoft Visual Studio 2012 or higher
 1. .NET Framework 4.5.1
 1. MySQL
@@ -38,6 +41,9 @@ Find more about TradeSharp [here](https://www.tradesharp.se/).
 
 
 ### Code Cloning ###
+
+*It is highly recommended that you clone the TradeSharp repositories in **C:\trade-nexus** directory as doing so would make things easier when creating the TradeSHarp installer.*
+
 1. Clone TradeSharp backend (tradesharp-core):
     * git clone https://github.com/trade-nexus/tradesharp-core
 1. Clone TradeSharp frontend (tradesharp-ui):
