@@ -12,6 +12,9 @@ Find more about TradeSharp [here](https://www.tradesharp.se/).
   * [Installation](#installation)
   * [Code Cloning](#code-cloning)
   * [Setting Up Database](#setting-up-database)
+  * [Opening Code With Visual Studio](#opening-code-with-visual-studio)
+  * [Enabling Test Code to Simulate Service Start](#enabling-test-code-to-simulate-service-start)
+  * [Changing ROOT DIRECTORY PATH](#changing-root-directory-path)
   * [Running Application](#running-application)
   * [Viewing Logs](#viewing-logs)
   * [Reporting Bugs](#bugs)
@@ -84,6 +87,9 @@ To load data from workbench
 
 
 ### Enabling Test Code to Simulate Service Start ###
+
+_This step is important to perform before running TradeSharp locally without installer_
+
 1. In Visual Studio instance with tradesharp-ui code, open **TradeHubGui\ViewModel\ServicesViewModel.cs**
 1. Find **PopulateServices()** method and then locate comments
     **“//NOTE: Test code to simulate Service Start”
@@ -122,6 +128,9 @@ private void StopService(string serviceName)
 ```
 
 ### Changing ROOT DIRECTORY PATH ###
+
+_This step is important to perform before running TradeSharp locally without installer_
+
 1. In Visual Studio instance with tradesharp-ui code, open **TradeHubGui\TradeHubGui.Common\Constants\DirectoryPath.cs**
 1. Comment line _public static string ROOT_DIRECTORY_PATH = Path.GetFullPath(@"~\..\..\");_
 1. Uncomment line _public static string ROOT_DIRECTORY_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\TradeHub\\";_
