@@ -1,1 +1,0 @@
-MyDir=C:\TradeSharp\MarketDataEngine;OEEDir=C:\TradeSharp\OrderExecutionEngine;PEDir=C:\TradeSharp\PositionEngine;UIDir=C:\TradeSharp\TradeHubGui;ISDir=C:\TradeSharp\Configuration;TMDir=C:\TradeSharp\TradeManager;TSDir=C:\TradeSharp\TemplateInstaller;publishDir=C:\TradeSharp\AdminWebsite;
