@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RabbitMQ>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>marketdata_exchange</Exchange>
+  <HeartbeatRoutingKey>marketdata.engine.heartbeat</HeartbeatRoutingKey>
+  <AppInfoRoutingKey>marketdata.engine.appinfo</AppInfoRoutingKey>
+  <LoginRoutingKey>marketdata.engine.login</LoginRoutingKey>
+  <LogoutRoutingKey>marketdata.engine.logout</LogoutRoutingKey>
+  <InquiryRoutingKey>marketdata.engine.inquiry</InquiryRoutingKey>
+  <SubscribeRoutingKey>marketdata.engine.subscribe</SubscribeRoutingKey>
+  <UnsubscribeRoutingKey>marketdata.engine.unsubscribe</UnsubscribeRoutingKey>
+  <HistoricBarDataRoutingKey>marketdata.engine.historicbar</HistoricBarDataRoutingKey>
+  <LiveBarSubscribeRoutingKey>marketdata.engine.livebar.subscribe</LiveBarSubscribeRoutingKey>
+  <LiveBarUnsubscribeRoutingKey>marketdata.engine.livebar.unsubscribe</LiveBarUnsubscribeRoutingKey>
+</RabbitMQ>

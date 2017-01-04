@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E5A9A79-0B0C-428B-8385-015134B42D86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TradeSharp.UI.Common</RootNamespace>
+    <AssemblyName>TradeSharp.UI.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.Composition">
+      <HintPath>..\..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm">
+      <HintPath>..\..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop">
+      <HintPath>..\..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces">
+      <HintPath>..\..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TraceSourceLogger">
+      <HintPath>..\..\packages\TraceSourceLogger.2.2.0.1\lib\net45\x86\TraceSourceLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="TradeHub.Common.Core">
+      <HintPath>..\..\Common\TradeHub.Common.Core\bin\Debug\TradeHub.Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TradeHub.StrategyEngine.Utlility">
+      <HintPath>..\..\StrategyEngine\TradeHub.StrategyEngine.Utlility\bin\Debug\TradeHub.StrategyEngine.Utlility.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationSecurity\BinaryFileReader.cs" />
+    <Compile Include="Constants\ConditionOperator.cs" />
+    <Compile Include="Constants\DirectoryPath.cs" />
+    <Compile Include="Constants\LobRecordType.cs" />
+    <Compile Include="Constants\OptimizationStatus.cs" />
+    <Compile Include="Constants\OrderRequestType.cs" />
+    <Compile Include="Constants\OrderType.cs" />
+    <Compile Include="Constants\ProviderType.cs" />
+    <Compile Include="Constants\Services.cs" />
+    <Compile Include="Constants\ServiceStatus.cs" />
+    <Compile Include="Constants\SubscriptionType.cs" />
+    <Compile Include="EventSystem.cs" />
+    <Compile Include="Infrastructure\PersistCsv.cs" />
+    <Compile Include="Infrastructure\XmlFileManager.cs" />
+    <Compile Include="Models\BruteForceParameters.cs" />
+    <Compile Include="Models\DataPersistenceInformation.cs" />
+    <Compile Include="Models\FillDetail.cs" />
+    <Compile Include="ApplicationSecurity\Decryptor.cs" />
+    <Compile Include="ApplicationSecurity\LicenseKeyAnalyzer.cs" />
+    <Compile Include="ApplicationSecurity\LicenseState.cs" />
+    <Compile Include="ApplicationSecurity\LicenseType.cs" />
+    <Compile Include="ApplicationSecurity\TradeSharpLicense.cs" />
+    <Compile Include="ApplicationSecurity\TradeSharpLicenseManager.cs" />
+    <Compile Include="Models\StrategyStatistics.cs" />
+    <Compile Include="Utility\GetEnumDescriptions.cs" />
+    <Compile Include="Utility\PriceAlertGenerator.cs" />
+    <Compile Include="ValueObjects\AlertMessage.cs" />
+    <Compile Include="ValueObjects\BarDetail.cs" />
+    <Compile Include="ValueObjects\HistoricalBarParameters.cs" />
+    <Compile Include="Models\LimitOrderBookRecord.cs" />
+    <Compile Include="Models\MarketDataProvider.cs" />
+    <Compile Include="Models\OrderExecutionProvider.cs" />
+    <Compile Include="Models\OrderRequest.cs" />
+    <Compile Include="Models\PositionStatistics.cs" />
+    <Compile Include="Models\ProviderCredential.cs" />
+    <Compile Include="Models\SendOrderModel.cs" />
+    <Compile Include="Models\StrategyExecutionDetails.cs" />
+    <Compile Include="Models\GeneticAlgorithmResult.cs" />
+    <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\OptimizationStatistics.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\ServiceDetails.cs" />
+    <Compile Include="Models\Strategy.cs" />
+    <Compile Include="Models\StrategyInstance.cs" />
+    <Compile Include="ValueObjects\BarParameters.cs" />
+    <Compile Include="ValueObjects\PriceAlertCondition.cs" />
+    <Compile Include="ValueObjects\SubscriptionRequest.cs" />
+    <Compile Include="Models\MarketDataDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\FileReader.cs" />
+    <Compile Include="Utility\SortedObservableCollection.cs" />
+    <Compile Include="Utility\StrategyIdGenerator.cs" />
+    <Compile Include="ValueObjects\BruteForceParameterDetail.cs" />
+    <Compile Include="ValueObjects\OptimizationParameterDetail.cs" />
+    <Compile Include="Models\GeneticAlgorithmParameters.cs" />
+    <Compile Include="ValueObjects\ParameterDetail.cs" />
+    <Compile Include="ValueObjects\StrategyInstanceStatus.cs" />
+    <Compile Include="ValueObjects\UiElement.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="HistoricalDataConfiguration\HistoricalDataProvider.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Config\ClientMqConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\NotificationEngineClientMqConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\NotificationEngineServerMqInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LoggerConfig.xml" />
+    <Content Include="SpringConfig\HistoricalDataServiceSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\MarketDataServiceSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\MDEClientSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\MDEServer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\OEEClientMqConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\NotificationEngineClientSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\NotificationServiceSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\OEEClientSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\OEEServer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpringConfig\OrderExecutionServiceSpringConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="SpringConfig\SpringDao.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Config\ZmqConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

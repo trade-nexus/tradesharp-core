@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<StrategyMQParameters>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>marketdata_exchange</Exchange>
+  <AdminMessageQueue>marketdata_client_admin_queue</AdminMessageQueue>
+  <AdminMessageRoutingKey>marketdata.client.admin</AdminMessageRoutingKey>
+  
+  <TickDataQueue>marketdata_client_tickdata_queue</TickDataQueue>
+  <TickDataRoutingKey>marketdata.client.tickdata</TickDataRoutingKey>
+  <HistoricBarDataQueue>marketdata_client_historicbar_queue</HistoricBarDataQueue>
+  <HistoricBarDataRoutingKey>marketdata.client.historicbar</HistoricBarDataRoutingKey>
+  <LiveBarDataQueue>marketdata_client_livebar_queue</LiveBarDataQueue>
+  <LiveBarDataRoutingKey>marketdata.client.livebar</LiveBarDataRoutingKey>
+  
+  <InquiryResponseQueue>queue</InquiryResponseQueue>
+  <InquiryResponseRoutingKey>routingkey</InquiryResponseRoutingKey>
+  
+  <HeartbeatResponseQueue>marketdata_client_heartbeat_queue</HeartbeatResponseQueue>
+  <HeartbeatResponseRoutingKey>marketdata.client.heartbeat.routingkey</HeartbeatResponseRoutingKey>
+</StrategyMQParameters>
+

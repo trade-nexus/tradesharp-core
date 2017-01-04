@@ -256,6 +256,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeHub.DataConverter.Comm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeHub.StrategyEngine.MultiBrokerStrategy", "StrategyEngine\TradeHub.StrategyEngine.MultiBrokerStrategy\TradeHub.StrategyEngine.MultiBrokerStrategy.csproj", "{EA42FA83-2701-4E5C-9943-52D462169BB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIRequisites", "UIRequisites", "{068015B2-C2F1-4856-9DFF-E1400AD6AD85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeSharp.ServiceControllers", "UIRequisites\TradeSharp.ServiceControllers\TradeSharp.ServiceControllers.csproj", "{8E7E4246-3804-4D60-90C4-C0350013297D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeSharp.UI.Common", "UIRequisites\TradeSharp.UI.Common\TradeSharp.UI.Common.csproj", "{5E5A9A79-0B0C-428B-8385-015134B42D86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1558,6 +1564,38 @@ Global
 		{EA42FA83-2701-4E5C-9943-52D462169BB0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EA42FA83-2701-4E5C-9943-52D462169BB0}.Release|x64.ActiveCfg = Release|Any CPU
 		{EA42FA83-2701-4E5C-9943-52D462169BB0}.Release|x86.ActiveCfg = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|x64.ActiveCfg = Debug|x64
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|x64.Build.0 = Debug|x64
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Debug|x86.Build.0 = Debug|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|x64.ActiveCfg = Release|x64
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|x64.Build.0 = Release|x64
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|x86.ActiveCfg = Release|Any CPU
+		{8E7E4246-3804-4D60-90C4-C0350013297D}.Release|x86.Build.0 = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|x64.ActiveCfg = Debug|x64
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|x64.Build.0 = Debug|x64
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Debug|x86.Build.0 = Debug|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|x64.ActiveCfg = Release|x64
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|x64.Build.0 = Release|x64
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|x86.ActiveCfg = Release|Any CPU
+		{5E5A9A79-0B0C-428B-8385-015134B42D86}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1671,5 +1709,7 @@ Global
 		{2442B350-59B7-4DC9-BB89-F595001BDD4D} = {E10B6AC1-D5C3-4C65-8122-F6BE59643ACB}
 		{201E3E17-DE69-4CBD-88E8-532937455851} = {223A8298-2697-4F5E-B299-28F8658CBE72}
 		{EA42FA83-2701-4E5C-9943-52D462169BB0} = {7C2A0BC5-38F1-4EE3-8B99-057C74727655}
+		{8E7E4246-3804-4D60-90C4-C0350013297D} = {068015B2-C2F1-4856-9DFF-E1400AD6AD85}
+		{5E5A9A79-0B0C-428B-8385-015134B42D86} = {068015B2-C2F1-4856-9DFF-E1400AD6AD85}
 	EndGlobalSection
 EndGlobal

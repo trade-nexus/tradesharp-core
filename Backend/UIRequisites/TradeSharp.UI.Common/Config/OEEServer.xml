@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<RabbitMQ>
+  <ConnectionString>host=localhost</ConnectionString>
+  <Exchange>orderexecution_exchange</Exchange>
+  
+  <HeartbeatRoutingKey>orderexecution.engine.heartbeat</HeartbeatRoutingKey>
+  <AppInfoRoutingKey>orderexecution.engine.appinfo</AppInfoRoutingKey>
+  <InquiryRoutingKey>orderexecution.engine.inquiry</InquiryRoutingKey>
+  
+  <LoginRoutingKey>orderexecution.engine.login</LoginRoutingKey>
+  <LogoutRoutingKey>orderexecution.engine.logout</LogoutRoutingKey>
+
+  <OrderRequestRoutingKey>orderexecution.engine.orderrequest</OrderRequestRoutingKey>
+  <LimitOrderRoutingKey>orderexecution.engine.limitorder</LimitOrderRoutingKey>
+  <MarketOrderRoutingKey>orderexecution.engine.marketorder</MarketOrderRoutingKey>
+  <StopOrderRoutingKey>orderexecution.engine.stoporder</StopOrderRoutingKey>
+  <StopLimitOrderRoutingKey>orderexecution.engine.stoplimitorder</StopLimitOrderRoutingKey>
+  <LocateResponseRoutingKey>orderexecution.engine.locateresponse</LocateResponseRoutingKey>
+  <CancelOrderRoutingKey>orderexecution.engine.cancelorder</CancelOrderRoutingKey>
+</RabbitMQ>
