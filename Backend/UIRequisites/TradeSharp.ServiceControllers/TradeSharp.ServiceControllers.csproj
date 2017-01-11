@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -147,7 +147,7 @@
     <Compile Include="Services\TradeHubServicesController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TradeHubGui.Common\TradeSharp.UI.Common.csproj">
+    <ProjectReference Include="..\TradeSharp.UI.Common\TradeSharp.UI.Common.csproj">
       <Project>{5e5a9a79-0b0c-428b-8385-015134b42d86}</Project>
       <Name>TradeSharp.UI.Common</Name>
     </ProjectReference>
