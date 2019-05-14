@@ -1,3 +1,6 @@
+## IMPORTANT ##
+This is an old project and hasn't been actively maintained since 2015 and we're not providing any paid support for it.
+
 ## TradeSharp ##
 
 TradeSharp is a C# based data feed and broker neutral Algorithmic Trading Platform that lets trading firms or individuals automate any rules based trading strategies in stocks, forex and ETFs.
